@@ -7,6 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
+        <title>Amazon UTN</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>  <title>pjj</title>
 
@@ -51,28 +52,59 @@ and open the template in the editor.
 
             <form>
                 <div class="form-group">
-                    <label for="formGroupExampleInput">Example label</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                    <label for="formGroupExampleInput2">Nombre de Usuario</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombre de Usuario">
                 </div>
                 <div class="form-group">
-                    <label for="formGroupExampleInput2">Another label</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+                    <label for="formGroupExampleInput2">Contraseña</label>
+                    <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Nombre de Usuario">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Cédula</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Cédula">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Nombres</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombres">
                 </div>
                  <div class="form-group">
-                    <label for="formGroupExampleInput">Example label</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                    <label for="formGroupExampleInput">Apellidos</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Apellidos">
                 </div>
                 <div class="form-group">
-                    <label for="formGroupExampleInput2">Another label</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+                    <label for="formGroupExampleInput2">Fecha De Nacimiento</label>
+                    <input type="datetime" class="form-control" id="formGroupExampleInput2" placeholder="Fecha De Nacimiento">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Teléfono</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Teléfono">
                 </div> <div class="form-group">
-                    <label for="formGroupExampleInput">Example label</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                    <label for="formGroupExampleInput">Dirección</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Dirección">
+                </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Email</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Email">
                 </div>
                 <div class="form-group">
-                    <label for="formGroupExampleInput2">Another label</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+                    <label for="formGroupExampleInput2">Calle Principal</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Calle Principal">
                 </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Calle Secundaria</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Calle Secundaria">
+                </div>
+                
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Numero de Casa</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Numero de Casa">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Referencia</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Referencia">
+                </div>
+                
+                
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Registrar</button>
 
             </form>
