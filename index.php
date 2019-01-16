@@ -126,7 +126,7 @@ and open the template in the editor.
                                   <a href="product_details.html"><img src="src/img/product/2.jpg" alt=""></a>
 					<div class="caption">
 					  <h5>Nombre Del Producto</h5>
-					  <h4><a class="btn" href="product_details.html">VIEW</a> <span class="pull-right">$0.00</span></h4>
+                                          <h4><a class="btn" href="vista/product_details.html">VIEW</a> <span class="pull-right">$0.00</span></h4>
 					</div>
 				  </div>
 				</li>
@@ -245,33 +245,9 @@ and open the template in the editor.
 					</div>
 				  </div>
 				</li>
-				<li class="span3">
-				  <div class="thumbnail">
-					<a href="product_details.html"><img src="themes/images/products/3.jpg" alt=""></a>
-					<div class="caption">
-					  <h5>Nombre Del Producto</h5>
-					  <h4><a class="btn" href="product_details.html">VIEW</a> <span class="pull-right">$0.00</span></h4>
-					</div>
-				  </div>
-				</li>
-				<li class="span3">
-				  <div class="thumbnail">
-					<a href="product_details.html"><img src="themes/images/products/4.jpg" alt=""></a>
-					<div class="caption">
-					  <h5>Nombre Del Producto</h5>
-					   <h4><a class="btn" href="product_details.html">VIEW</a> <span class="pull-right">$0.00</span></h4>
-					</div>
-				  </div>
-				</li>
-				<li class="span3">
-				  <div class="thumbnail">
-					<a href="product_details.html"><img src="themes/images/products/5.jpg" alt=""></a>
-					<div class="caption">
-					  <h5>Nombre Del Producto</h5>
-					   <h4><a class="btn" href="product_details.html">VIEW</a> <span class="pull-right">$0.00</span></h4>
-					</div>
-				  </div>
-				</li>
+
+				
+				
 			  </ul>
 			  </div>
 			  </div>
