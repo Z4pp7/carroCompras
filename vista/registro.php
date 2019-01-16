@@ -50,62 +50,38 @@ and open the template in the editor.
 
         <div class="container">
 
-            <form>
-                <div class="form-group">
-                    <label for="formGroupExampleInput2">Nombre de Usuario</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombre de Usuario">
-                </div>
-                <div class="form-group">
-                    <label for="formGroupExampleInput2">Contraseña</label>
-                    <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Nombre de Usuario">
-                </div>
+            <form action="../controlador/ControladorPrincipal.php">
+           
                 <div class="form-group">
                     <label for="formGroupExampleInput">Cédula</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Cédula">
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Cédula" name="cedula">
                 </div>
                 <div class="form-group">
                     <label for="formGroupExampleInput2">Nombres</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombres">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombres" name="nombres">
                 </div>
-                 <div class="form-group">
+                <div class="form-group">
                     <label for="formGroupExampleInput">Apellidos</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Apellidos">
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Apellidos" name="apellidos">
                 </div>
                 <div class="form-group">
                     <label for="formGroupExampleInput2">Fecha De Nacimiento</label>
-                    <input type="datetime" class="form-control" id="formGroupExampleInput2" placeholder="Fecha De Nacimiento">
+                    <input type="datetime" class="form-control" id="formGroupExampleInput2" placeholder="Fecha De Nacimiento" name="fecha">
                 </div>
                 <div class="form-group">
                     <label for="formGroupExampleInput2">Teléfono</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Teléfono">
-                </div> <div class="form-group">
-                    <label for="formGroupExampleInput">Dirección</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Dirección">
-                </div>
-                  <div class="form-group">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Teléfono" name="telefono">
+                </div> 
+
+
+                <div class="form-group">
                     <label for="formGroupExampleInput">Email</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Email">
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="correo" name="correo">
                 </div>
-                <div class="form-group">
-                    <label for="formGroupExampleInput2">Calle Principal</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Calle Principal">
-                </div>
-                <div class="form-group">
-                    <label for="formGroupExampleInput2">Calle Secundaria</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Calle Secundaria">
-                </div>
-                
-                <div class="form-group">
-                    <label for="formGroupExampleInput2">Numero de Casa</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Numero de Casa">
-                </div>
-                <div class="form-group">
-                    <label for="formGroupExampleInput2">Referencia</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Referencia">
-                </div>
-                
-                
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Registrar</button>
+
+
+                <input type="hidden" value="guardarCliente" name="opcion">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Registrar</button>
 
             </form>
 
