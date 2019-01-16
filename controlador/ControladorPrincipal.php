@@ -16,7 +16,7 @@ switch ($opcion) {
         $APELLIDOS_CL = $_REQUEST['apellidos'];
         $FECHA_NACIMIENTO_CL = $_REQUEST['fecha'];
         $TELEFONO_CL = $_REQUEST['telefono'];
-        $EMAIL_CL = $_REQUEST['correo'];
+        $CORREO_CL = $_REQUEST['correo'];
         $cliente->crearCliente($CEDULA_CL, $NOMBRES_CL, $APELLIDOS_CL, $FECHA_NACIMIENTO_CL, $TELEFONO_CL, $CORREO_CL);
         header('Location: ../index.php');
         break;

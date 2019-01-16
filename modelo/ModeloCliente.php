@@ -21,7 +21,7 @@ class ModeloCliente {
 
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "insert into TBL_CLIENTE (CEDULA_CL, NOMBRES_CL,APELLIDOS_CL,FECHA_NACIMIENTO_CL,TELEFONO_CL,CORREO_CL) values(?,?,?,?,?,?)";
+        $sql = "insert into TB_CLIENTE (CEDULA_CL,NOMBRES_CL,APELLIDOS_CL,FECHA_NACIMIENTO_CL,TELEFONO_CL,CORREO_CL) values(?,?,?,?,?,?)";
         $consulta = $pdo->prepare($sql);
         try {
             $consulta->execute(array($CEDULA_CL, $NOMBRES_CL, $APELLIDOS_CL, $FECHA_NACIMIENTO_CL, $TELEFONO_CL, $CORREO_CL));
