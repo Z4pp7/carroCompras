@@ -15,7 +15,7 @@ and open the template in the editor.
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">VENTAS UTN</a>
+            <a class="navbar-brand" href="#">Amazon UTN</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -47,47 +47,52 @@ and open the template in the editor.
                 <a class="nav-link" href="registro.php">Registrarse</a>
             </div>
         </nav>
-
-        <div class="container">
+        
+        
+        
+                <div class="container">
 
             <form action="../controlador/ControladorPrincipal.php">
            
                 <div class="form-group">
-                    <label for="formGroupExampleInput">Cédula</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Cédula" name="cedula">
+                    <label for="formGroupExampleInput">Código Postal</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Código Postal" name="postal">
                 </div>
                 <div class="form-group">
-                    <label for="formGroupExampleInput2">Nombres</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombres" name="nombres">
+                    <label for="formGroupExampleInput2">País</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="País" name="pais">
                 </div>
                 <div class="form-group">
-                    <label for="formGroupExampleInput">Apellidos</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Apellidos" name="apellidos">
+                    <label for="formGroupExampleInput">Provincia</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Provincia" name="provincia">
                 </div>
                 <div class="form-group">
-                    <label for="formGroupExampleInput2">Fecha De Nacimiento</label>
-                    <input type="datetime" class="form-control" id="formGroupExampleInput2" placeholder="Fecha De Nacimiento" name="fecha">
+                    <label for="formGroupExampleInput2">Ciudad</label>
+                    <input type="datetime" class="form-control" id="formGroupExampleInput2" placeholder="Ciudad" name="ciudad">
                 </div>
                 <div class="form-group">
-                    <label for="formGroupExampleInput2">Teléfono</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Teléfono" name="telefono">
+                    <label for="formGroupExampleInput2">Calle 1</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Calle 1" name="calle1">
                 </div> 
 
 
                 <div class="form-group">
-                    <label for="formGroupExampleInput">Email</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="correo" name="correo">
+                    <label for="formGroupExampleInput">Calle 2</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Calle 2" name="calle2">
+                </div>
+                
+                 <div class="form-group">
+                    <label for="formGroupExampleInput">Referencia</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Referencia" name="referencia">
                 </div>
 
 
-                <input type="hidden" value="guardarCliente" name="opcion">
+
+                <input type="hidden" value="guardarUbicacion" name="opcion">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Registrar</button>
 
             </form>
 
         </div>
-
-
-
     </body>
 </html>

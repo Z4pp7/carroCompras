@@ -17,6 +17,7 @@ include_once 'Cliente.php';
 
 class ModeloCliente {
     
+  
       public function crearCliente($CEDULA_CL, $NOMBRES_CL, $APELLIDOS_CL, $FECHA_NACIMIENTO_CL, $TELEFONO_CL, $CORREO_CL) {
 
         $pdo = Database::connect();
@@ -32,6 +33,7 @@ class ModeloCliente {
         }
         Database::disconnect();
     }
-
+    
+  
   
 }

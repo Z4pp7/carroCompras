@@ -13,7 +13,7 @@
  */
 class Cliente {
     
-   private $ID_CL;             
+   public $ID_CL;             
    private $CEDULA_CL;        
    private $NOMBRES_CL;
    private $APELLIDOS_CL;
