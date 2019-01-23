@@ -17,6 +17,8 @@ include_once 'Cliente.php';
 
 class ModeloCliente {
     
+    public $ID_CL;
+    
   
       public function crearCliente($CEDULA_CL, $NOMBRES_CL, $APELLIDOS_CL, $FECHA_NACIMIENTO_CL, $TELEFONO_CL, $CORREO_CL) {
 
@@ -31,6 +33,7 @@ class ModeloCliente {
             Database::disconnect();
             throw new Exception($e->getMessage());
         }
+        
         Database::disconnect();
     }
     
