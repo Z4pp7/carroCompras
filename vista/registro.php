@@ -38,10 +38,6 @@ and open the template in the editor.
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="¿Qué estas buscando?" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-
-
-
-
                 </form>
                 <a class="nav-link" href="ingreso.php">Ingresar</a>
                 <a class="nav-link" href="registro.php">Registrarse</a>

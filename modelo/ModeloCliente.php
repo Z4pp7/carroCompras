@@ -34,6 +34,7 @@ class ModeloCliente {
             throw new Exception($e->getMessage());
         }
         
+       
         Database::disconnect();
     }
     
