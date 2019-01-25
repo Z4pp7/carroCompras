@@ -10,29 +10,19 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link href="css/carousel.css" rel="stylesheet">
     <link href="css/navbar.css" rel="stylesheet">
+        <link href="css/signin.css" rel="stylesheet">
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg ">
-      <a class="navbar-brand" href="../index.php"><i class="icon fas fa-ghost"></i></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item ">
-            <a class="nav-link" href="../index.php">Inicio <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="productos.php">Productos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contacto.php">Contáctanos</a>
-          </li>
-          </ul>
-          <a class="nav-link" href="registro.php">Registrarse</a>
-          <a class="nav-link-user" href="ingresar.php">Ingresar</a>
-      </div>
-    </nav>
+  <body class="text-center">
+
+
+    <form class="form-signin">
+      <i class="icon-login fas fa-ghost"></i>
+       <h1 class="h3 mb-3 font-weight-normal">Amazon UTN</h1>
+       <input type="email" id="inputEmail" class="form-control" placeholder="Correo electrónico" required autofocus>
+       <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+       <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+       <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+    </form>
 
   </body>
 </html>

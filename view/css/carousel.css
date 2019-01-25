@@ -9,6 +9,8 @@
 /* Carousel base class */
 .carousel {
   margin-bottom: 4rem;
+
+  
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -36,9 +38,11 @@
 .marketing .col-lg-4 {
   margin-bottom: 1.5rem;
   text-align: center;
+
 }
 .marketing h2 {
   font-weight: 400;
+    font-family: 'Signika';
 }
 .marketing .col-lg-4 p {
   margin-right: .75rem;
