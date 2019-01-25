@@ -1,0 +1,39 @@
+.navbar{
+  background: #df5b54;
+}
+.icon{
+  margin-left: 50px;
+  color: #fff;
+}
+.nav-link{
+    color: #ffe6e6;
+}
+
+.nav-link-user{
+    color: #ffe6e6;
+    margin-right: 50px;
+    text-decoration:none; 
+}
+
+.nav-link:hover,.nav-link-user:hover{
+    color: #fff;
+}
+
+
+.search-btn{
+  background-color: transparent;
+  border:0px solid transparent;
+  box-shadow: 0px 0px 1px transparent;
+  cursor: pointer;
+  margin-left: 8px;
+
+}
+
+.search-icon{
+    color: #fff;
+}
+
+.user{
+  display: inline-block;
+  float: left;
+}
