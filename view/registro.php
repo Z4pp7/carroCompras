@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -63,7 +63,7 @@ and open the template in the editor.
                     <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Teléfono" name="telefono">
                 </div>
 
-
+<h1>hola soy un comentario<h1>
                 <div class="form-group">
                     <label for="formGroupExampleInput">Email</label>
                     <input type="text" class="form-control" id="formGroupExampleInput" placeholder="correo" name="correo">
