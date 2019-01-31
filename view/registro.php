@@ -62,8 +62,6 @@ and open the template in the editor.
                     <label for="formGroupExampleInput2">Teléfono</label>
                     <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Teléfono" name="telefono">
                 </div>
-
-<h1>hola soy un comentario<h1>
                 <div class="form-group">
                     <label for="formGroupExampleInput">Email</label>
                     <input type="text" class="form-control" id="formGroupExampleInput" placeholder="correo" name="correo">
