@@ -6,7 +6,7 @@ class Mod_Producto {
 
 
   public function getApiProductos(){
-    $resultado =json_decode(file_get_contents("https://api-res-facturacion.herokuapp.com/api/productos",true));
+    $resultado =json_decode(file_get_contents("https://api-rest-tiendaonline.herokuapp.com/api/productos-categorias",true));
     $listado = array();
     foreach ($resultado as $dato) {
         $atributo = new Producto();

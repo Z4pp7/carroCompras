@@ -1,22 +1,29 @@
 .navbar{
-  background: #df5b54;
+ background: #eeeeee;
+ font-family: 'Helvetica', sans-serif;
+ font-size: 15px;
+ font-weight:500;
 }
 .icon{
   margin-left: 50px;
-  color: #fff;
+  color: #666666;
+}
+.icon-us, .icon-ca{
+
+  font-size: 18px;
 }
 .nav-link{
-    color: #ffe6e6;
+    color: #999999;
 }
 
-.nav-link-user{
-    color: #ffe6e6;
-    margin-right: 50px;
-    text-decoration:none; 
+.nav-link:hover{
+    color: #666666;
+   font-weight:500;
+    font-size: 15px;
 }
+.icon:hover{
+  color: #947ada;
 
-.nav-link:hover,.nav-link-user:hover{
-    color: #fff;
 }
 
 
@@ -30,10 +37,8 @@
 }
 
 .search-icon{
-    color: #fff;
+    color: #999999;
 }
-
-.user{
-  display: inline-block;
-  float: left;
+.navbar-toggler-icon{
+  color: #fff;
 }

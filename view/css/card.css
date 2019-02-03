@@ -1,0 +1,23 @@
+.card-img-top {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  margin-top: 25px;
+
+}
+.card-body{
+  align-items: center;
+}
+.card-title{
+  font-family: 'Helvetica', sans-serif;
+  color: #666666;
+}
+
+.card-text{
+  font-family: 'Helvetica', sans-serif;
+  color: #999999;
+}
+
+.btn{
+  margin-top: 15px;
+}
