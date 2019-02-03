@@ -6,141 +6,160 @@
 
 class Usuario {
 
-    public  $ID_US;
-    private $CEDULA_US;
-    private $NOMBRES_US;
-    private $APELLIDOS_US;
-    private $FECHA_NACIMIENTO_US;
-    private $TELEFONO_US;
-    private $CORREO_US;
-    private $CODIGO_POSTAL_CL;
-    private $PAIS_CL;
-    private $PROVINCIA_CL;
-    private $CIUDAD_CL;
-    private $CALLE_UNO_CL;
-    private $CALLE_DOS_CL;
-    private $REFERENCIA_CL;
-    private $NUMERO_CASA_CL;
+    public  $id_us;
+    private $cedula_us;
+    private $nombres_us;
+    private $apellidos_us;
+    private $fecha_nacimiento_us;
+    private $telefono_us;
+    private $correo_us;
+    private $codigo_postal_cl;
+    private $pais_cl;
+    private $provincia_cl;
+    private $ciudad_cl;
+    private $calle_uno_cl;
+    private $calle_dos_cl;
+    private $referencia_cl;
+    private $numero_casa_cl;
+    private $usuario_cl;
+    private $password_cl;
 
-    function getID_CL() {
-        return $this->ID_CL;
+    function getId_us() {
+        return $this->id_us;
     }
 
-    function getCEDULA_CL() {
-        return $this->CEDULA_CL;
+    function getCedula_us() {
+        return $this->cedula_us;
     }
 
-    function getNOMBRES_CL() {
-        return $this->NOMBRES_CL;
+    function getNombres_us() {
+        return $this->nombres_us;
     }
 
-    function getAPELLIDOS_CL() {
-        return $this->APELLIDOS_CL;
+    function getApellidos_us() {
+        return $this->apellidos_us;
     }
 
-    function getFECHA_NACIMIENTO_CL() {
-        return $this->FECHA_NACIMIENTO_CL;
+    function getFecha_nacimiento_us() {
+        return $this->fecha_nacimiento_us;
     }
 
-    function getTELEFONO_CL() {
-        return $this->TELEFONO_CL;
+    function getTelefono_us() {
+        return $this->telefono_us;
     }
 
-    function getCORREO_CL() {
-        return $this->CORREO_CL;
+    function getCorreo_us() {
+        return $this->correo_us;
     }
 
-    function getCODIGO_POSTAL_CL() {
-        return $this->CODIGO_POSTAL_CL;
+    function getCodigo_postal_cl() {
+        return $this->codigo_postal_cl;
     }
 
-    function getPAIS_CL() {
-        return $this->PAIS_CL;
+    function getPais_cl() {
+        return $this->pais_cl;
     }
 
-    function getPROVINCIA_CL() {
-        return $this->PROVINCIA_CL;
+    function getProvincia_cl() {
+        return $this->provincia_cl;
     }
 
-    function getCIUDAD_CL() {
-        return $this->CIUDAD_CL;
+    function getCiudad_cl() {
+        return $this->ciudad_cl;
     }
 
-    function getCALLE_UNO_CL() {
-        return $this->CALLE_UNO_CL;
+    function getCalle_uno_cl() {
+        return $this->calle_uno_cl;
     }
 
-    function getCALLE_DOS_CL() {
-        return $this->CALLE_DOS_CL;
+    function getCalle_dos_cl() {
+        return $this->calle_dos_cl;
     }
 
-    function getREFERENCIA_CL() {
-        return $this->REFERENCIA_CL;
+    function getReferencia_cl() {
+        return $this->referencia_cl;
     }
 
-    function getNUMERO_CASA_CL() {
-        return $this->NUMERO_CASA_CL;
+    function getNumero_casa_cl() {
+        return $this->numero_casa_cl;
+    }
+
+    function getUsuario_cl() {
+        return $this->usuario_cl;
+    }
+
+    function getPassword_cl() {
+        return $this->password_cl;
+    }
+
+    function setId_us($id_us) {
+        $this->id_us = $id_us;
+    }
+
+    function setCedula_us($cedula_us) {
+        $this->cedula_us = $cedula_us;
+    }
+
+    function setNombres_us($nombres_us) {
+        $this->nombres_us = $nombres_us;
+    }
+
+    function setApellidos_us($apellidos_us) {
+        $this->apellidos_us = $apellidos_us;
+    }
+
+    function setFecha_nacimiento_us($fecha_nacimiento_us) {
+        $this->fecha_nacimiento_us = $fecha_nacimiento_us;
+    }
+
+    function setTelefono_us($telefono_us) {
+        $this->telefono_us = $telefono_us;
+    }
+
+    function setCorreo_us($correo_us) {
+        $this->correo_us = $correo_us;
+    }
+
+    function setCodigo_postal_cl($codigo_postal_cl) {
+        $this->codigo_postal_cl = $codigo_postal_cl;
+    }
+
+    function setPais_cl($pais_cl) {
+        $this->pais_cl = $pais_cl;
+    }
+
+    function setProvincia_cl($provincia_cl) {
+        $this->provincia_cl = $provincia_cl;
+    }
+
+    function setCiudad_cl($ciudad_cl) {
+        $this->ciudad_cl = $ciudad_cl;
+    }
+
+    function setCalle_uno_cl($calle_uno_cl) {
+        $this->calle_uno_cl = $calle_uno_cl;
+    }
+
+    function setCalle_dos_cl($calle_dos_cl) {
+        $this->calle_dos_cl = $calle_dos_cl;
+    }
+
+    function setReferencia_cl($referencia_cl) {
+        $this->referencia_cl = $referencia_cl;
+    }
+
+    function setNumero_casa_cl($numero_casa_cl) {
+        $this->numero_casa_cl = $numero_casa_cl;
+    }
+
+    function setUsuario_cl($usuario_cl) {
+        $this->usuario_cl = $usuario_cl;
+    }
+
+    function setPassword_cl($password_cl) {
+        $this->password_cl = $password_cl;
     }
 
 
-    function setID_CL($ID_CL) {
-        $this->ID_CL = $ID_CL;
-    }
-
-    function setCEDULA_CL($CEDULA_CL) {
-        $this->CEDULA_CL = $CEDULA_CL;
-    }
-
-    function setNOMBRES_CL($NOMBRES_CL) {
-        $this->NOMBRES_CL = $NOMBRES_CL;
-    }
-
-    function setAPELLIDOS_CL($APELLIDOS_CL) {
-        $this->APELLIDOS_CL = $APELLIDOS_CL;
-    }
-
-    function setFECHA_NACIMIENTO_CL($FECHA_NACIMIENTO_CL) {
-        $this->FECHA_NACIMIENTO_CL = $FECHA_NACIMIENTO_CL;
-    }
-
-    function setTELEFONO_CL($TELEFONO_CL) {
-        $this->TELEFONO_CL = $TELEFONO_CL;
-    }
-
-    function setCORREO_CL($CORREO_CL) {
-        $this->CORREO_CL = $CORREO_CL;
-    }
-
-    function setCODIGO_POSTAL_CL($CODIGO_POSTAL_CL) {
-        $this->CODIGO_POSTAL_CL = $CODIGO_POSTAL_CL;
-    }
-
-    function setPAIS_CL($PAIS_CL) {
-        $this->PAIS_CL = $PAIS_CL;
-    }
-
-    function setPROVINCIA_CL($PROVINCIA_CL) {
-        $this->PROVINCIA_CL = $PROVINCIA_CL;
-    }
-
-    function setCIUDAD_CL($CIUDAD_CL) {
-        $this->CIUDAD_CL = $CIUDAD_CL;
-    }
-
-    function setCALLE_UNO_CL($CALLE_UNO_CL) {
-        $this->CALLE_UNO_CL = $CALLE_UNO_CL;
-    }
-
-    function setCALLE_DOS_CL($CALLE_DOS_CL) {
-        $this->CALLE_DOS_CL = $CALLE_DOS_CL;
-    }
-
-    function setREFERENCIA_CL($REFERENCIA_CL) {
-        $this->REFERENCIA_CL = $REFERENCIA_CL;
-    }
-
-    function setNUMERO_CASA_CL($NUMERO_CASA_CL) {
-        $this->NUMERO_CASA_CL = $NUMERO_CASA_CL;
-    }
 
 }

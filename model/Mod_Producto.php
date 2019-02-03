@@ -1,4 +1,9 @@
 <?php
+
+/**
+ * @author zappy-zero
+ */
+
 include_once 'Database.php';
 include_once 'Producto.php';
 
@@ -31,11 +36,12 @@ class Mod_Producto {
         $listado = array();
         foreach ($resultado as $dato) {
             $atributo = new Producto();
-            //$atributo->setId_pr($dato['id']);
+            $atributo->setId_pr($dato['id']);
             //$atributo->setCodigo_pr($dato['id']);
+            //$atributo->setCategoria_pr($dato['id']);
             $atributo->setImagen_pr($dato['imagen']);
             $atributo->setNombre_pr($dato['nombre']);
-            $atributo->setDetalle_pr($dato['descripcion']);
+            $atributo->setDescripcion_pr($dato['descripcion']);
             //$atributo->setCaracteristicas_pr($dato['id']);
             $atributo->setValor_unitario_pr($dato['precio']);
             //$atributo->setStock_pr($dato['id']);

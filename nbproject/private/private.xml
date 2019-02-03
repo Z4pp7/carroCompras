@@ -11,6 +11,13 @@
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        
+        <group>
+            <file>file:/C:/xampp/htdocs/tienda-online/controller/con_carrito.php</file>
+            <file>file:/C:/xampp/htdocs/tienda-online/controller/con_usuario.php</file>
+            <file>file:/C:/xampp/htdocs/tienda-online/model/Mod_Producto.php</file>
+            <file>file:/C:/xampp/htdocs/tienda-online/model/Producto.php</file>
+            <file>file:/C:/xampp/htdocs/tienda-online/model/Mod_Cliente.php</file>
+            <file>file:/C:/xampp/htdocs/tienda-online/model/Usuario.php</file>
+        </group>
     </open-files>
 </project-private>

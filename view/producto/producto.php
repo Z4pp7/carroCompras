@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
   include '../../controller/con_carrito.php';
+  include '../../controller/config.php';
   require_once '../../model/Mod_Producto.php';
  ?>
 
@@ -19,6 +20,11 @@
             <input class="form-control mr-sm-2" type="search" placeholder="Buscar . . ." aria-label="Search">
             <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Buscar</button>
           </form>
+          <div>
+            <?php
+            echo  print_r($_POST);
+            echo $mensaje; ?>
+          </div>
         </span>
       </nav>
       <div class="wrapper">
@@ -45,7 +51,7 @@
         <!-- Page Content -->
         <div id="content">
           <div class="row">
-            
+
             <?php
             $producto= new Mod_Producto();
             $lista=$producto->getProductos();
@@ -60,16 +66,20 @@
                    src=" <?php echo  $dato->getImagen_pr(); ?>"
                    data-toggle="popover"
                    data-trigger="hover"
-                   data-content="<?php echo $dato->getDetalle_pr(); ?>"
+                   data-content="<?php echo $dato->getDescripcion_pr(); ?>"
                    >
                     <div class="card-body">
                       <h5 class="card-title">  <?php echo  $dato->getNombre_pr();  ?></h5>
                       <p class="card-text"><?php echo  $dato->getValor_unitario_pr();  ?></p>
 
-                      <form action="" method="post">
-                        <input type="hidden" name="nombre_pr" id="nombre_pr" value="<?php echo $dato->getNombre_pr(); ?>">
-                        <input type="hidden" name="valor_pr" value="<?php echo $dato->getNombre_pr(); ?>">
-                        <button class="btn btn-secondary" type="submit" name"btn_agregar" value="agregar">
+                      <form action="">
+
+                        <input type="text" name="id_pr" id="id_pr" value="<?php echo openssl_encrypt($dato->getId_pr(),cod,key); ?>">
+                        <input type="text" name="nombre_pr" id="nombre_pr" value="<?php echo openssl_encrypt($dato->getNombre_pr(),cod,key); ?>">
+                        <input type="text" name="valor_pr" id="valor"value="<?php echo openssl_encrypt($dato->getValor_unitario_pr(),cod,key);?>">
+                        <input type="text" name="cantidad_pr" id="codigo_pr" value="<?php echo openssl_encrypt(1,cod,key);?>">
+
+                        <button class="btn btn-secondary" type="submit" id="btnagregar" name"btnagregar" value="agregar">
                           Añadir al carrito
                         </button>
                       </form>

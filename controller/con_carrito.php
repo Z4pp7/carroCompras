@@ -1,10 +1,16 @@
 <?php
 $mensaje="";
-if(isset($_POST['btn_agregar'])){
-  switch ($_POST['btn_agregar']) {
+
+if(isset($_POST['btnagregar'])){
+  switch ($_POST['btnagregar']) {
     case 'agregar':
-        $mensaje="Articulo agregado correctamente";
-      
+    if(is_numeric(openssl_decrypt($_POST['id_pr'],cod,key))){
+      $id=openssl_decrypt($_POST['id_pr'],cod,key);
+      $mensaje="ok";
+    }else{
+      $mensaje="error";
+    }
+
       break;
 
     default:
@@ -12,8 +18,4 @@ if(isset($_POST['btn_agregar'])){
       break;
   }
 
-}else{
-  $mensaje="noff isetr";
-
 }
-?>

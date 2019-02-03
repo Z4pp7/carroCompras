@@ -4,7 +4,8 @@
  * Clase utilitaria que maneja la conexion/desconexion a la base de datos
  * mediante las funciones PDO (PHP Data Objects).
  * Utiliza el patron de diseno singleton para el manejo de la conexion.
- * @author mrea
+  * @author zappy-zero
+
  */
 class Database {
 
