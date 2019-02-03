@@ -10,7 +10,7 @@ and open the template in the editor.
     <link href="../css/registro.css" rel="stylesheet">
     </head>
     <body>
-        <?php include '../html/navbar-l.php'; ?>
+        <?php include '../html/navbar.php'; ?>
 
         <div class="container">
           <form action="../controlador/ControladorPrincipal.php">

@@ -4,12 +4,19 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+<?php include '../../controller/con_session.php'; ?>
 <html>
     <head>
       <?php include '../html/head.php'; ?>
   </head>
   <body>
-      <?php include '../html/navbar.php'; ?>
+    <?php
+      if(!empty($_SESSION['session'])){
+        include '../html/navbar-l.php';
+      }else{
+        include '../html/navbar.php';
+      }
+     ?>
 
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -95,7 +102,7 @@ and open the template in the editor.
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
       </div>
       <div class="col-md-5">
-              
+
         <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect fill="#eee" width="100%" height="100%"></rect><text fill="#aaa" dy=".3em" x="50%" y="50%">500x500</text></svg>
       </div>
     </div>

@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+
+  include '../../controller/con_carrito.php';
+  if(!empty($_SESSION['session'])){
+ ?>
 <html lang="en" dir="ltr">
   <head>
       <?php include '../html/head.php'; ?>
@@ -12,6 +17,10 @@
 
           </span>
         </nav>
+
+        <?php
+        if(!empty($_SESSION['detalle'])){
+         ?>
         <table class="table table-hover table-bordered text-center">
           <thead>
             <tr>
@@ -25,47 +34,54 @@
             </tr>
           </thead>
           <tbody>
+            <?php
+              $total=0;
+              foreach ($_SESSION['detalle'] as $index => $producto) {
+            ?>
             <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>@mdo</td>
-              <td>@mdo</td>
-              <td><button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Eliminar</button></td>
+              <th scope="row"><?php echo $index+1; ?></th>
+              <td><?php echo $producto['id'];?></td>
+              <td><?php echo $producto['nombre'];?></td>
+              <td><?php echo $producto['valor'];?></td>
+              <td><?php echo $producto['cantidad'];?></td>
+              <td><?php echo number_format($producto['cantidad']*$producto['valor'],2);?></td>
+              <td>
+                <form action="" method="post">
+                  <input type="hidden" name="id_pr" id="id_pr" value="<?php echo openssl_encrypt($producto['id'],cod,key); ?>">
+                  <input type="hidden" name="opcion" value="eliminar">
+                  <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Eliminar</button>
+                </form>
 
+              </td>
             </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>@mdo</td>
-              <td>@mdo</td>
-              <td><button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Eliminar</button></td>
+            <?php
+                $total=$total+($producto['cantidad']*$producto['valor']);
+              }
 
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>@mdo</td>
-              <td>@mdo</td>
-              <td><button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Eliminar</button></td>
+             ?>
 
-            </tr>
             <tr>
-
               <td colspan="5" align="right"><h4>Total</h4></td>
-              <td >800</td>
+              <td > <?php echo number_format($total,2); ?></td>
               <td><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Comprar</button></td>
-
             </tr>
           </tbody>
         </table>
+        <?php
+      }else{  ?>
+        </br>
+        <div class="alert alert-success text-center">
+          Carrito vacio
+        </div>
+
+      <?php  }   ?>
       </div>
 
   </body>
     <?php include '../html/footer.php'; ?>
 </html>
+<?php
+}else{
+    header('Location: http://localhost/tienda-online/view/tienda/index.php');
+}
+?>

@@ -19,18 +19,25 @@
       <ul class="nav">
           <li class="nav-item">
           <a class="nav-link" href="../producto/carrito.php">
-            <i class="icon-ca fas fa-shopping-cart"></i>
+            <i class="icon-ca fas fa-shopping-cart"></i> <?php echo(empty($_SESSION['detalle']))?0:count($_SESSION['detalle']);?>
           </a>
-        </li>
+         </li>
 
-        <li class="nav-item dropleft">
+      <li class="nav-item dropleft">
           <a class="nav-link " data-toggle="dropdown" role="button" href="#" aria-haspopup="true" aria-expanded="false" >
               <i class="icon-us fas fa-user-circle"></i>
           </a>
           <div class="dropdown-menu" role="menu">
             <a class="dropdown-item" href="../usuario/datos.php">Mi cuenta</a>
             <div role="separator" class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#three">Salir</a>
+            <a class="dropdown-item" href="">
+              <form method="post">
+                <input type="hidden" value="signout" name="opcion" />
+                <button class="btn btn-outline-secondary btn-block" type="submit">
+                 Salir
+               </button></a>
+              </form>
+
           </div>
       </li>
   </ul>

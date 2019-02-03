@@ -1,9 +1,14 @@
 <!DOCTYPE html>
+<?php
+  include '../../controller/con_carrito.php';
+  if(!empty($_SESSION['session'])){
+ ?>
 <html lang="en" dir="ltr">
   <head>
     <?php include '../html/head.php'; ?>
     <link href="../css/sidebar.css" rel="stylesheet">
     <link href="../css/datos.css" rel="stylesheet">
+
   </head>
   <body>
     <?php include '../html/navbar-l.php'; ?>
@@ -228,3 +233,8 @@
   </body>
   <?php include '../html/footer.php'; ?>
 </html>
+<?php
+}else{
+    header('Location: http://localhost/tienda-online/view/tienda/index.php');
+}
+?>
