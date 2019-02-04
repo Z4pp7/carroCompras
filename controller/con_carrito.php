@@ -5,6 +5,7 @@ require_once '../../model/Mod_Producto.php';
 $producto = new Mod_Producto();
 
   $mensaje="";
+  $mensaje_cat="";
   if(isset($_POST['opcion'])){
     switch ($_POST['opcion']) {
       case 'agregar':
@@ -74,8 +75,10 @@ $producto = new Mod_Producto();
       break;
 
       case 'filtrar':
+
       $categoria=$_POST['categoria'];
       $lista=$producto->getProductosCategorizados($categoria);
+      $_SESSION['mensaje']=serialize($categoria);
       $_SESSION['listafiltrada'] = serialize($lista);
       header('Location: http://localhost/tienda-online/view/producto/filtrado.php');
       break;

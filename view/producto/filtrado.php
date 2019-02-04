@@ -73,6 +73,15 @@ $categorias=$producto->getCategorias();
           </nav>
         <!-- Page Content -->
         <div id="content">
+
+
+          <div class="alert alert-success text-center">
+            Filtrado por <?php
+            if (isset($_SESSION['mensaje'])) { $mensaje = unserialize($_SESSION['mensaje']); }
+              echo $mensaje;
+                   ?>
+          </div>
+
           <div class="row">
 
             <?php
@@ -84,7 +93,11 @@ $categorias=$producto->getCategorias();
                     foreach ($lista as $dato) {
             ?>
 
+
+
             <div class="col-4">
+
+
                 <div class="card text-center" >
                    <img
                    class="card-img-top"

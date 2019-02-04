@@ -37,9 +37,12 @@
             <?php
               $total=0;
               $row=0;
-
+              $j=$_SESSION['detalle'];
               foreach ($_SESSION['detalle'] as $producto) {
               $row=$row+1;
+              if($producto['codigo']==$j[0]){
+                $row=$row+88;
+              }
             ?>
             <tr>
               <th scope="row"><?php echo $row; ?></th>

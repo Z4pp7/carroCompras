@@ -47,8 +47,8 @@ $categorias=$producto->getCategorias();
               <li class="active">
                 <button class="btn-sidebar btn-block" type="submit">
                   <i class="icon-s fas fa-tags"></i>Ver todo</button>
-
               </li>
+
               <?php
               foreach ($categorias as $cat) {
                ?>
