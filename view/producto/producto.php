@@ -28,7 +28,6 @@
             <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Buscar</button>
           </form>
           <div>
-            <?php // echo $mensaje; ?>
           </div>
         </span>
       </nav>
@@ -69,6 +68,9 @@ $categorias=$producto->getCategorias();
           </nav>
         <!-- Page Content -->
         <div id="content">
+          <?php echo $mensaje_ultimo_pro; ?>
+
+
           <div class="row">
 
             <?php

@@ -6,6 +6,7 @@ $producto = new Mod_Producto();
 
   $mensaje="";
   $mensaje_cat="";
+  $mensaje_ultimo_pro="";
   if(isset($_POST['opcion'])){
     switch ($_POST['opcion']) {
       case 'agregar':
@@ -18,7 +19,12 @@ $producto = new Mod_Producto();
       }
       if(is_string(openssl_decrypt($_POST['nombre_pr'],cod,key)) ){
         $nombre=openssl_decrypt($_POST['nombre_pr'],cod,key);
-        $mensaje.="ADD: ".$nombre."</br>";
+        $mensaje_ultimo_pro =" <div class=\"alert alert-success text-center\"> Último producto agregado ".$nombre."
+        <span class=\"badge badge-success\">
+        <a  href=\"carrito.php\">Ver carrito</a>
+        </span>
+        </div>";
+
       }else {
         $mensaje="error";
       }
@@ -55,6 +61,7 @@ $producto = new Mod_Producto();
         );
         $_SESSION['detalle'][$index]=$producto;
       }
+
       $mensaje=print_r($_SESSION,true);
       break;
 
