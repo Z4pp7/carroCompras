@@ -37,9 +37,8 @@
             <?php
               $total=0;
               $row=0;
-        
-              foreach ($_SESSION['detalle'] as $index => $producto) {
 
+              foreach ($_SESSION['detalle'] as $producto) {
               $row=$row+1;
             ?>
             <tr>
