@@ -82,7 +82,7 @@ ul ul a {
 }
 .icon-s {
   margin-right: 7px;
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 
@@ -93,4 +93,22 @@ ul ul a {
     padding-bottom: 30px;
     min-height: 100vh;
     transition: all 0.3s;
+}
+.btn-sidebar{
+  overflow:hidden;
+  padding:12px ;
+  background-color:#f5f5f5;
+  border:0px solid #f5f5f5;
+  box-shadow: 0px 0px 1px #f5f5f5;
+  cursor: pointer;
+  color: #666666;
+  font-size: 12px;
+  font-family: 'Helvetica', sans-serif;
+  text-align: left;
+}
+
+.btn-sidebar:hover{
+  background-color:#eeeeee;
+  border:0px solid #eeeeee;
+  box-shadow: 0px 0px 1px #eeeeee;
 }

@@ -36,18 +36,22 @@
           <tbody>
             <?php
               $total=0;
+              $row=0;
+        
               foreach ($_SESSION['detalle'] as $index => $producto) {
+
+              $row=$row+1;
             ?>
             <tr>
-              <th scope="row"><?php echo $index+1; ?></th>
-              <td><?php echo $producto['id'];?></td>
+              <th scope="row"><?php echo $row; ?></th>
+              <td><?php echo $producto['codigo'];?></td>
               <td><?php echo $producto['nombre'];?></td>
               <td><?php echo $producto['valor'];?></td>
               <td><?php echo $producto['cantidad'];?></td>
               <td><?php echo number_format($producto['cantidad']*$producto['valor'],2);?></td>
               <td>
                 <form action="" method="post">
-                  <input type="hidden" name="id_pr" id="id_pr" value="<?php echo openssl_encrypt($producto['id'],cod,key); ?>">
+                  <input type="hidden" name="codigo_pr" id="codigo_pr" value="<?php echo openssl_encrypt($producto['codigo'],cod,key); ?>">
                   <input type="hidden" name="opcion" value="eliminar">
                   <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Eliminar</button>
                 </form>

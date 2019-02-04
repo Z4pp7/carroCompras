@@ -1,13 +1,16 @@
 <?php
 include 'config.php';
 include 'con_session.php';
+require_once '../../model/Mod_Producto.php';
+$producto = new Mod_Producto();
 
   $mensaje="";
   if(isset($_POST['opcion'])){
     switch ($_POST['opcion']) {
       case 'agregar':
-      if(is_numeric(openssl_decrypt($_POST['id_pr'],cod,key))){
-        $id=openssl_decrypt($_POST['id_pr'],cod,key);
+
+      if(is_string(openssl_decrypt($_POST['codigo_pr'],cod,key))){
+        $id=openssl_decrypt($_POST['codigo_pr'],cod,key);
         $mensaje.="ADD: ".$id."</br>";
       }else {
         $mensaje="error";
@@ -30,10 +33,11 @@ include 'con_session.php';
       }else{
         $mensaje="error";
       }
+
       if(!isset($_SESSION['detalle']))
       {
         $producto = array(
-          'id' => $id ,
+          'codigo' => $id ,
           'nombre' => $nombre,
           'valor' => $valor ,
           'cantidad' => $cantidad
@@ -43,7 +47,7 @@ include 'con_session.php';
       }else{
         $index=count($_SESSION['detalle']);
         $producto = array(
-          'id' => $id ,
+          'codigo' => $id ,
           'nombre' => $nombre,
           'valor' => $valor ,
           'cantidad' => $cantidad
@@ -54,18 +58,30 @@ include 'con_session.php';
       break;
 
       case 'eliminar':
-      if(is_numeric(openssl_decrypt($_POST['id_pr'],cod,key))){
-        $id=openssl_decrypt($_POST['id_pr'],cod,key);
-        foreach ($_SESSION['detalle'] as $index => $producto) {
-          if($id==$producto['id'])
-          {
-            unset($_SESSION['detalle'][$index]);
 
+        if(is_string(openssl_decrypt($_POST['codigo_pr'],cod,key))){
+          $id=openssl_decrypt($_POST['codigo_pr'],cod,key);
+          foreach ($_SESSION['detalle'] as $index => $producto) {
+            if($id==$producto['codigo'])
+            {
+              unset($_SESSION['detalle'][$index]);
+
+            }
           }
         }
-      }
 
 
+      break;
+
+      case 'filtrar':
+      $categoria=$_POST['categoria'];
+      $lista=$producto->getProductosCategorizados($categoria);
+      $_SESSION['listafiltrada'] = serialize($lista);
+      header('Location: http://localhost/tienda-online/view/producto/filtrado.php');
+      break;
+
+      case 'todo':
+      header('Location: http://localhost/tienda-online/view/producto/producto.php');
       break;
 
       default:

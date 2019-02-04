@@ -13,16 +13,16 @@ class Usuario {
     private $fecha_nacimiento_us;
     private $telefono_us;
     private $correo_us;
-    private $codigo_postal_cl;
-    private $pais_cl;
-    private $provincia_cl;
-    private $ciudad_cl;
-    private $calle_uno_cl;
-    private $calle_dos_cl;
-    private $referencia_cl;
-    private $numero_casa_cl;
-    private $usuario_cl;
-    private $password_cl;
+    private $codigo_postal_us;
+    private $pais_us;
+    private $provincia_us;
+    private $ciudad_us;
+    private $calle_uno_us;
+    private $calle_dos_us;
+    private $referencia_us;
+    private $numero_casa_us;
+    private $usuario_us;
+    private $password_us;
 
     function getId_us() {
         return $this->id_us;
@@ -52,44 +52,44 @@ class Usuario {
         return $this->correo_us;
     }
 
-    function getCodigo_postal_cl() {
-        return $this->codigo_postal_cl;
+    function getCodigo_postal_us() {
+        return $this->codigo_postal_us;
     }
 
-    function getPais_cl() {
-        return $this->pais_cl;
+    function getPais_us() {
+        return $this->pais_us;
     }
 
-    function getProvincia_cl() {
-        return $this->provincia_cl;
+    function getProvincia_us() {
+        return $this->provincia_us;
     }
 
-    function getCiudad_cl() {
-        return $this->ciudad_cl;
+    function getCiudad_us() {
+        return $this->ciudad_us;
     }
 
-    function getCalle_uno_cl() {
-        return $this->calle_uno_cl;
+    function getCalle_uno_us() {
+        return $this->calle_uno_us;
     }
 
-    function getCalle_dos_cl() {
-        return $this->calle_dos_cl;
+    function getCalle_dos_us() {
+        return $this->calle_dos_us;
     }
 
-    function getReferencia_cl() {
-        return $this->referencia_cl;
+    function getReferencia_us() {
+        return $this->referencia_us;
     }
 
-    function getNumero_casa_cl() {
-        return $this->numero_casa_cl;
+    function getNumero_casa_us() {
+        return $this->numero_casa_us;
     }
 
-    function getUsuario_cl() {
-        return $this->usuario_cl;
+    function getUsuario_us() {
+        return $this->usuario_us;
     }
 
-    function getPassword_cl() {
-        return $this->password_cl;
+    function getPassword_us() {
+        return $this->password_us;
     }
 
     function setId_us($id_us) {
@@ -120,45 +120,46 @@ class Usuario {
         $this->correo_us = $correo_us;
     }
 
-    function setCodigo_postal_cl($codigo_postal_cl) {
-        $this->codigo_postal_cl = $codigo_postal_cl;
+    function setCodigo_postal_us($codigo_postal_us) {
+        $this->codigo_postal_us = $codigo_postal_us;
     }
 
-    function setPais_cl($pais_cl) {
-        $this->pais_cl = $pais_cl;
+    function setPais_us($pais_us) {
+        $this->pais_us = $pais_us;
     }
 
-    function setProvincia_cl($provincia_cl) {
-        $this->provincia_cl = $provincia_cl;
+    function setProvincia_us($provincia_us) {
+        $this->provincia_us = $provincia_us;
     }
 
-    function setCiudad_cl($ciudad_cl) {
-        $this->ciudad_cl = $ciudad_cl;
+    function setCiudad_us($ciudad_us) {
+        $this->ciudad_us = $ciudad_us;
     }
 
-    function setCalle_uno_cl($calle_uno_cl) {
-        $this->calle_uno_cl = $calle_uno_cl;
+    function setCalle_uno_us($calle_uno_us) {
+        $this->calle_uno_us = $calle_uno_us;
     }
 
-    function setCalle_dos_cl($calle_dos_cl) {
-        $this->calle_dos_cl = $calle_dos_cl;
+    function setCalle_dos_us($calle_dos_us) {
+        $this->calle_dos_us = $calle_dos_us;
     }
 
-    function setReferencia_cl($referencia_cl) {
-        $this->referencia_cl = $referencia_cl;
+    function setReferencia_us($referencia_us) {
+        $this->referencia_us = $referencia_us;
     }
 
-    function setNumero_casa_cl($numero_casa_cl) {
-        $this->numero_casa_cl = $numero_casa_cl;
+    function setNumero_casa_us($numero_casa_us) {
+        $this->numero_casa_us = $numero_casa_us;
     }
 
-    function setUsuario_cl($usuario_cl) {
-        $this->usuario_cl = $usuario_cl;
+    function setUsuario_us($usuario_us) {
+        $this->usuario_us = $usuario_us;
     }
 
-    function setPassword_cl($password_cl) {
-        $this->password_cl = $password_cl;
+    function setPassword_us($password_us) {
+        $this->password_us = $password_us;
     }
+
 
 
 

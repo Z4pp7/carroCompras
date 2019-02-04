@@ -10,7 +10,7 @@
 class Database {
 
      //Propiedades estaticas con la informacion de la conexion (DSN):
-    private static $dbName = 'tienda';
+    private static $dbName = 'tienda-online';
     private static $dbHost = 'localhost';
     private static $dbUsername = 'root';
     private static $dbUserPassword = '';

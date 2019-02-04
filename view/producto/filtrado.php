@@ -28,14 +28,14 @@
             <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Buscar</button>
           </form>
           <div>
-            <?php // echo $mensaje; ?>
+
           </div>
         </span>
       </nav>
 
 <?php
 $producto= new Mod_Producto();
-$lista=$producto->getProductos();
+//$lista=$producto->getProductos();
 $categorias=$producto->getCategorias();
  ?>
 
@@ -44,22 +44,26 @@ $categorias=$producto->getCategorias();
         <!-- Sidebar -->
         <nav id="sidebar">
             <ul class="list-unstyled components">
-              <li class="active">
-                <button class="btn-sidebar btn-block" type="submit">
-                  <i class="icon-s fas fa-tags"></i>Ver todo</button>
+              <li>
+                  <form method="post">
+                    <input type="hidden" name="opcion" value="todo"/>
+                    <button class="btn-sidebar btn-block" type="submit">
+                    <i class="icon-s fas fa-tags"></i>Ver todo</button>
+                 </form>
 
               </li>
+
               <?php
               foreach ($categorias as $cat) {
                ?>
-               <li >
-                 <form method="post">
-                    <input type="hidden" name="categoria" value="<?php echo $cat->getNombre_ca(); ?>"/>
-                   <input type="hidden" name="opcion" value="filtrar"/>
-                  <button class="btn-sidebar btn-block" type="submit">
-                    <i class="icon-s fas fa-tag"></i><?php echo $cat->getNombre_ca(); ?>
-                  </button>
-                </form>
+              <li >
+                <form method="post">
+                   <input type="hidden" name="categoria" value="<?php echo $cat->getNombre_ca(); ?>"/>
+                  <input type="hidden" name="opcion" value="filtrar"/>
+                 <button class="btn-sidebar btn-block" type="submit">
+                   <i class="icon-s fas fa-tag"></i><?php echo $cat->getNombre_ca(); ?>
+                 </button>
+               </form>
               </li>
               <?php
               }
@@ -73,7 +77,11 @@ $categorias=$producto->getCategorias();
 
             <?php
 
-            foreach ($lista as $dato) {
+            if (isset($_SESSION['listafiltrada'])) {
+
+                $lista = unserialize($_SESSION['listafiltrada']);
+
+                    foreach ($lista as $dato) {
             ?>
 
             <div class="col-4">
@@ -107,7 +115,9 @@ $categorias=$producto->getCategorias();
                 </br>
 
               </div>
-          <?php } ?>
+          <?php }
+        }
+        ?>
           </div>
 
       </div>
