@@ -8,9 +8,11 @@ $producto = new Mod_Producto();
   $mensaje_cat="";
   $mensaje_ultimo_pro="";
   if(isset($_POST['opcion'])){
+
+  if(isset($_SESSION['session']))
+  {
     switch ($_POST['opcion']) {
       case 'agregar':
-
       if(is_string(openssl_decrypt($_POST['codigo_pr'],cod,key))){
         $id=openssl_decrypt($_POST['codigo_pr'],cod,key);
         $mensaje.="ADD: ".$id."</br>";
@@ -98,5 +100,9 @@ $producto = new Mod_Producto();
         // code...
       break;
     }
+  }else{
+      header('Location: http://localhost/tienda-online/view/tienda/ingresar.php');
+  }
+
 
 }
