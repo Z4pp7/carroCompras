@@ -107,10 +107,10 @@ $categoria = new Mod_Categoria();
       $cat=$_POST['categoria'];
       //Descomentar y comentar dependiendo del caso
       //Usando bdd local:
-      $lista=$categoria->getProductosCategorizados($cat);
+      //$lista=$categoria->getProductosCategorizados($cat);
       //Usando API:
 
-    //  $lista=$categoria->getApiProductosCategorizados($cat);
+      $lista=$categoria->getApiProductosCategorizados($cat);
       $_SESSION['mensaje']=serialize($cat);
       $_SESSION['listafiltrada'] = serialize($lista);
       header('Location: http://localhost/tienda-online/view/producto/filtrado.php');

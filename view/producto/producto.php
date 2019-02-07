@@ -38,11 +38,11 @@ $producto= new Mod_Producto();
 $categoria= new Mod_Categoria();
 //Descomentar y comentar dependiendo del caso
 //Usando bdd local:
-$lista=$producto->getProductos();
-$categorias=$categoria->getCategorias();
+//$lista=$producto->getProductos();
+//$categorias=$categoria->getCategorias();
 //Usando API local:
-//$lista=$producto->getApiProductos();
-//$categorias=$categoria->getApiCategorias();
+$lista=$producto->getApiProductos();
+$categorias=$categoria->getApiCategorias();
  ?>
       <div class="wrapper">
         <!-- Sidebar -->

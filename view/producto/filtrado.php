@@ -38,9 +38,9 @@
 $categoria= new Mod_Categoria();
 //Descomentar y comentar dependiendo del caso
 //Usando bdd local:
-$categorias=$categoria->getCategorias();
+//$categorias=$categoria->getCategorias();
 //Usando API local:
-//$categorias=$categoria->getApiCategorias();
+$categorias=$categoria->getApiCategorias();
 
  ?>
 

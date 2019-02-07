@@ -31,9 +31,9 @@ class Mod_Categoria {
     $inventario_array = json_decode($inventario_json, true);
     $listado = array();
     foreach ($inventario_array as $dato) {
-        $atributo = new Categoria();
-        if($dato["categoria"]["cat_nombre"]===$categoria){
           $atributo = new Producto();
+        if($dato["categoria"]["cat_nombre"]===$categoria){
+
           $atributo->setCodigo_pr($dato['pro_codigo']);
           $atributo->setCategoria_pr($dato["categoria"]["cat_nombre"]);
           $atributo->setImagen_pr($dato['pro_foto']);
@@ -42,8 +42,9 @@ class Mod_Categoria {
           $atributo->setCaracteristicas_pr($dato['pro_caracteristicas']);
           $atributo->setValor_unitario_pr($dato['pro_precio']);
           $atributo->setStock_pr($dato['pro_stock']);
+            array_push($listado, $atributo);
         }
-        array_push($listado, $atributo);
+
     }
     return $listado;
   }
