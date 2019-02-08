@@ -19,7 +19,7 @@ $mensaje_login="";
                 header('Location: http://localhost/tienda-online/view/tienda/index.php');
 
             }else{
-                $mensaje_login=" <div class=\"alert alert-success text-center\"> Usuario o contraseña incorrectos
+                $mensaje_login=" <div class=\"alert alert-danger text-center\"> Usuario o contraseña incorrectos
                 <span class=\"badge badge-success\"></div>";
             }
             // PARA PROBAR SIN CONEXION
@@ -61,7 +61,7 @@ $mensaje_login="";
                 $mensaje_login=" <div class=\"alert alert-success text-center\"> Registro exitoso
                 <span class=\"badge badge-success\"></div>";
             }else{
-                $mensaje_login=" <div class=\"alert alert-success text-center\"> Usuario o contraseña incorrectos
+                $mensaje_login=" <div class=\"alert alert-danger text-center\"> ".$sesion->getMessage_us()."
                 <span class=\"badge badge-success\"></div>";
             }
             break;

@@ -62,12 +62,24 @@ class Mod_Usuario {
 
                     );
     $response = $this->jsonResponse($url,$jsonData);
-    print_r($response);
+    $error="";
     $atributo = new Usuario();
-    if($response["message"]==="Usuario creado satisfactoriamente"){
+    if(isset($response["message"])){
         $atributo->setMessage_us($response["message"]);
-    }else{
-        $atributo="Error al registrarse";
+    }
+    else {
+
+      if(isset($response["errors"]["name"][0]))
+      {
+        $error="El nombre de usuario ya ha sido registrado. ";
+      }else if(isset($response["errors"]["cedula_us"][0]))
+      {
+        $error="El número decédula ya ha sido registrado. ";
+      }else if(isset($response["errors"]["email"][0])){
+        $error="El número decédula ya ha sido registrado. ";
+      }
+
+      $atributo->setMessage_us($error);
     }
     return $atributo;
   }
