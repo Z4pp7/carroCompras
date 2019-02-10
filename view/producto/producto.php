@@ -2,6 +2,7 @@
 <?php
   include '../../controller/con_carrito.php';
   require_once '../../model/Mod_Producto.php';
+  require_once '../../model/Mod_Categoria.php';
 
  ?>
 
@@ -28,18 +29,21 @@
             <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Buscar</button>
           </form>
           <div>
-            <?php // echo $mensaje; ?>
           </div>
         </span>
       </nav>
 
 <?php
 $producto= new Mod_Producto();
-$lista=$producto->getProductos();
-$categorias=$producto->getCategorias();
+$categoria= new Mod_Categoria();
+//Descomentar y comentar dependiendo del caso
+//Usando bdd local:
+//$lista=$producto->getProductos();
+//$categorias=$categoria->getCategorias();
+//Usando API local:
+$lista=$producto->getApiProductos();
+$categorias=$categoria->getApiCategorias();
  ?>
-
-
       <div class="wrapper">
         <!-- Sidebar -->
         <nav id="sidebar">
@@ -69,6 +73,9 @@ $categorias=$producto->getCategorias();
           </nav>
         <!-- Page Content -->
         <div id="content">
+          <?php echo $mensaje_ultimo_pro; ?>
+
+
           <div class="row">
 
             <?php

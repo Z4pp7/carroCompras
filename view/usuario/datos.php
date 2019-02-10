@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
   include '../../controller/con_carrito.php';
+  require_once '../../model/Mod_Usuario.php';
   if(!empty($_SESSION['session'])){
  ?>
 <html lang="en" dir="ltr">
@@ -72,12 +73,17 @@
           </script>
         <!-- DATOS DE USUARIO -->
         <form action="">
+          <?php
+          if (isset($_SESSION['user_session'])) {
+              $user_session = unserialize($_SESSION['user_session']);
+
+          ?>
           <div class="row">
                 <div class="col col-lg-3">
                   <h6 class="text-uppercase font-weight-bold">DATOS DE CUENTA</h6>
                 </div>
                 <div class="col">
-                   <input type="hidden" class="form-control" id="cuenta" placeholder="Nombre de usuario" disabled="true"/>
+                   <input type="hidden" class="form-control" id="cuenta" disabled="true"/>
                     <input type="checkbox" id="cbx" style="display:none" onclick="editar('cuenta');" />
                     <label for="cbx" class="toggle"><span></span></label>
                 </div>
@@ -85,7 +91,7 @@
           <div class="datos">
             <div class="form-group">
              <label ><i class="icon-s fa fa-user"></i>Usuario</label>
-             <input type="text" class="form-control" id="us" placeholder="Nombre de usuario" disabled="true"/>
+             <input type="text" class="form-control" id="us" placeholder="Nombre de usuario" value="<?php echo $user_session->getUsuario_us();?>"  disabled="true"/>
              <small  class="form-text text-muted">Utilice combinación de mayúsculas, minúsculas y números</small>
             </div>
             <div class="form-group">
@@ -106,7 +112,7 @@
               <h6 class="text-uppercase font-weight-bold">DATOS PERSONALES</h6>
             </div>
             <div class="col">
-               <input type="hidden" class="form-control" id="personal" placeholder="Nombre de usuario" disabled="true"/>
+               <input type="hidden" class="form-control" id="personal"/>
               <input type="checkbox" id="cbx1" style="display:none" onclick="editar('personal')"/>
               <label for="cbx1" class="toggle"><span></span></label>
             </div>
@@ -114,25 +120,25 @@
           <div class="datos">
             <div class="form-group">
              <label ><i class="icon-s fa fa-id-card"></i>Cédula</label>
-             <input type="text" class="form-control" id="ce"placeholder="Cédula" disabled/>
+             <input type="text" class="form-control" id="ce"placeholder="Cédula" value="<?php echo $user_session->getCedula_us();?>" disabled/>
              <small  class="form-text text-muted"></small>
             </div>
             <div class="form-group">
                <label ><i class="icon-s fa fa-user"></i>Nombres y apellidos</label>
                <div class="row">
                  <div class="col">
-                   <input type="text" class="form-control" id="no"placeholder="Nombres" disabled/>
+                   <input type="text" class="form-control" id="no"placeholder="Nombres" value="<?php echo $user_session->getNombres_us();?>" disabled/>
                    <small  class="form-text text-muted"></small>
                  </div>
                  <div class="col">
-                   <input type="text" class="form-control" id="ap"placeholder="Apellidos" disabled/>
+                   <input type="text" class="form-control" id="ap"placeholder="Apellidos" value="<?php echo $user_session->getApellidos_us();?>" disabled/>
                    <small  class="form-text text-muted"></small>
                  </div>
                </div>
             </div>
             <div class="form-group">
              <label ><i class="icon-s fa fa-calendar-alt"></i>Fecha de nacimiento</label>
-             <input type="date" class="form-control" id="fe" disabled>
+             <input type="date" class="form-control" id="fe" value="<?php echo $user_session->getFecha_nacimiento_us();?>" disabled>
              <small  class="form-text text-muted"></small>
              </div>
            </div>
@@ -146,7 +152,7 @@
               <h6 class="text-uppercase font-weight-bold">DATOS DE CONTACTO</h6>
             </div>
             <div class="col">
-              <input type="hidden" class="form-control" id="contacto" placeholder="Nombre de usuario" disabled="true"/>
+              <input type="hidden" class="form-control" id="contacto"/>
               <input type="checkbox" id="cbx2" style="display:none" onclick="editar('contacto')"/>
               <label for="cbx2" class="toggle"><span></span></label>
             </div>
@@ -154,12 +160,12 @@
           <div class="datos">
            <div class="form-group">
             <label><i class="icon-s fas fa-mobile-alt"></i>Teléfono</label>
-            <input type="text" class="form-control" id="te" placeholder="Teléfono" disabled/>
+            <input type="text" class="form-control" id="te" placeholder="Teléfono" value="<?php echo $user_session->getTelefono_us();?>" disabled/>
             <small  class="form-text text-muted"></small>
            </div>
            <div class="form-group">
             <label><i class="icon-s far fa-envelope"></i>Correo electrónico</label>
-            <input type="email" class="form-control" id="co" placeholder="Correo electrónico" disabled/>
+            <input type="email" class="form-control" id="co" placeholder="Correo electrónico" value="<?php echo $user_session->getCorreo_us();?>" disabled/>
             <small  class="form-text text-muted"></small>
            </div>
           </div>
@@ -173,7 +179,7 @@
                 <h6 class="text-uppercase font-weight-bold">DATOS DE DOMICILIO</h6>
               </div>
               <div class="col">
-                  <input type="hidden" class="form-control" id="domicilio" placeholder="Nombre de usuario" disabled="true"/>
+                  <input type="hidden" class="form-control" id="domicilio"/>
                   <input type="checkbox" id="cbx3" style="display:none" onclick="editar('domicilio')"/>
                   <label for="cbx3" class="toggle"><span></span></label>
               </div>
@@ -181,22 +187,22 @@
           <div class="datos">
             <div class="form-group">
               <label><i class="icon-s fa fa-flag"></i>Código postal</label>
-              <input type="text" class="form-control" id="cp" placeholder="Código postal" disabled />
+              <input type="text" class="form-control" id="cp" placeholder="Código postal" value="<?php echo $user_session->getCodigo_postal_us();?>" disabled />
               <small  class="form-text text-muted"></small>
             </div>
             <div class="form-group">
               <label><i class="icon-s fas fa-city"></i>País - Provincia - Ciudad</label>
               <div class="row">
                   <div class="col">
-                    <input type="text" class="form-control" id="pa" placeholder="País" disabled />
+                    <input type="text" class="form-control" id="pa" placeholder="País" value="<?php echo $user_session->getPais_us();?>" disabled />
                     <small  class="form-text text-muted"></small>
                   </div>
                   <div class="col">
-                    <input type="text" class="form-control" id="po" placeholder="Provincia" disabled />
+                    <input type="text" class="form-control" id="po" placeholder="Provincia" value="<?php echo $user_session->getProvincia_us();?>"disabled />
                     <small  class="form-text text-muted"></small>
                   </div>
                   <div class="col">
-                    <input type="text" class="form-control" id="ci" placeholder="Ciudad" disabled />
+                    <input type="text" class="form-control" id="ci" placeholder="Ciudad" value="<?php echo $user_session->getCiudad_us();?>" disabled />
                     <small  class="form-text text-muted"></small>
                   </div>
               </div>
@@ -205,23 +211,23 @@
               <label><i class="icon-s fas fa-map-marker-alt"></i>Calle 1 - Calle 2</label>
               <div class="row">
                 <div class="col">
-                 <input type="text" class="form-control" id="c1" placeholder="Calle 1" disabled />
+                 <input type="text" class="form-control" id="c1" placeholder="Calle 1" value="<?php echo $user_session->getCalle_uno_us();?>" disabled />
                  <small  class="form-text text-muted"></small>
                 </div>
                 <div class="col">
-                   <input type="text" class="form-control" id="c2" placeholder="Calle 2" disabled />
+                   <input type="text" class="form-control" id="c2" placeholder="Calle 2" value="<?php echo $user_session->getCalle_dos_us();?>" disabled />
                     <small  class="form-text text-muted"></small>
                 </div>
               </div>
             </div>
             <div class="form-group">
               <label><i class="icon-s fas fa-map-marker-alt"></i>Referencia</label>
-              <input type="text" class="form-control" id="re" placeholder="Referencia" disabled />
+              <input type="text" class="form-control" id="re" placeholder="Referencia" value="<?php echo $user_session->getReferencia_us();?>" disabled />
               <small  class="form-text text-muted"></small>
             </div>
             <div class="form-group">
               <label><i class="icon-s fas fa-home"></i>N° de casa</label>
-              <input type="text" class="form-control" id="nc" placeholder="N° de casa" disabled />
+              <input type="text" class="form-control" id="nc" placeholder="N° de casa" value="<?php echo $user_session->getNumero_casa_us();?>" disabled />
               <small  class="form-text text-muted"></small>
             </div>
           </div>
@@ -230,6 +236,9 @@
         </form>
       </div>
      </div>
+     <?php
+   }
+      ?>
   </body>
   <?php include '../html/footer.php'; ?>
 </html>
