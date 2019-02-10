@@ -2,6 +2,7 @@
 <?php
   include '../../controller/con_carrito.php';
   require_once '../../model/Mod_Producto.php';
+  require_once '../../model/Mod_Categoria.php';
 
  ?>
 
@@ -34,9 +35,13 @@
       </nav>
 
 <?php
-$producto= new Mod_Producto();
-//$lista=$producto->getProductos();
-$categorias=$producto->getCategorias();
+$categoria= new Mod_Categoria();
+//Descomentar y comentar dependiendo del caso
+//Usando bdd local:
+//$categorias=$categoria->getCategorias();
+//Usando API local:
+$categorias=$categoria->getApiCategorias();
+
  ?>
 
 
@@ -96,9 +101,15 @@ $categorias=$producto->getCategorias();
 
 
             <div class="col-4">
+              <form action="" method="post">
+                <input type="hidden" name="codigo_pr" id="codigo_pr" value="<?php echo $dato->getCodigo_pr();?>">
+                <input type="hidden" name="opcion" value="detalle">
 
 
-                <div class="card text-center" >
+
+                <div class="card text-center swing" >
+                  <button class="btn-detalle" type="submit">
+
                    <img
                    class="card-img-top"
                    title="<?php echo $dato->getNombre_pr(); ?>"
@@ -107,24 +118,15 @@ $categorias=$producto->getCategorias();
                    data-trigger="hover"
                    data-content="<?php echo $dato->getDescripcion_pr(); ?>"
                    >
+                    </button>
                     <div class="card-body">
                       <h5 class="card-title">  <?php echo  $dato->getNombre_pr();  ?></h5>
                       <p class="card-text"><?php echo  $dato->getValor_unitario_pr();  ?></p>
 
-                      <form action="" method="post">
-
-                        <input type="hidden" name="codigo_pr" id="codigo_pr" value="<?php echo openssl_encrypt($dato->getCodigo_pr(),cod,key); ?>">
-                        <input type="hidden" name="nombre_pr" id="nombre_pr" value="<?php echo openssl_encrypt($dato->getNombre_pr(),cod,key); ?>">
-                        <input type="hidden" name="valor_pr" id="valor_pr"value="<?php echo openssl_encrypt($dato->getValor_unitario_pr(),cod,key);?>">
-                        <input type="hidden" name="cantidad_pr" id="cantidad_pr" value="<?php echo openssl_encrypt(1,cod,key);?>">
-                        <input type="hidden" name="opcion" value="agregar">
-                        <button class="btn btn-secondary" type="submit">
-                          Añadir al carrito
-                        </button>
-                      </form>
 
                     </div>
                   </div>
+                      </form>
                 </br>
 
               </div>

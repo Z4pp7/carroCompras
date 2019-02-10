@@ -6,6 +6,7 @@
 
 class Usuario {
 
+    public  $message_us;
     public  $id_us;
     private $cedula_us;
     private $nombres_us;
@@ -23,6 +24,11 @@ class Usuario {
     private $numero_casa_us;
     private $usuario_us;
     private $password_us;
+
+    function getMessage_us() {
+        return $this->message_us;
+    }
+
 
     function getId_us() {
         return $this->id_us;
@@ -90,6 +96,12 @@ class Usuario {
 
     function getPassword_us() {
         return $this->password_us;
+    }
+
+
+
+    function setMessage_us($message_us) {
+        $this->message_us = $message_us;
     }
 
     function setId_us($id_us) {

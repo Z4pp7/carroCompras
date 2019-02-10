@@ -14,6 +14,9 @@
       <li class="nav-item">
         <a class="nav-link" href="../tienda/contacto.php">Contáctanos</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../tienda/ayuda.php">Ayuda</a>
+      </li>
       </ul>
 
       <ul class="nav">

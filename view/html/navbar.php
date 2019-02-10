@@ -14,6 +14,9 @@
       <li class="nav-item">
         <a class="nav-link" href="../tienda/contacto.php">Contáctanos</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../tienda/ayuda.php">Ayuda</a>
+      </li>
       </ul>
 
       <ul class="nav">
@@ -21,9 +24,78 @@
           <a class="nav-link" href="../tienda/registro.php">Registrarse</a>
         </li
         <li class="nav-item">
-          <a class="nav-link" href="../tienda/ingresar.php">Ingresar</a>
+        <a class="nav-link" href="../tienda/ingresar.php" id="myBtn">Ingresar</a>
         </li>
       </ul>
 
   </div>
 </nav>
+  <!--
+<style>
+ .modal-header, h4, .close {
+    font-family: 'Helvetica', sans-serif;
+   background-color: #999999;
+   color:white !important;
+   text-align: center;
+   font-size: 30px;
+ }
+ .modal-footer {
+   background-color: #f9f9f9;
+ }
+ .ico{
+   color: #666666;
+   margin-left: 5px;
+ }
+ .ico-login{
+   color: #666666;
+   margin-left: 10px;
+ }
+ label
+ {
+   font-family: 'Helvetica', sans-serif;
+   font-size: 14px;
+   color: #666666;
+ }
+ </style>
+
+
+<div class="modal fade" id="myModal" role="dialog">
+   <div class="modal-dialog">
+
+
+     <div class="modal-content">
+       <div class="modal-header" style="padding:35px 50px;">
+
+         <h4><span><i class="icon-login fas fa-ghost"></i></span> Amazon UTN</h4>
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+       </div>
+       <div class="modal-body" style="padding:40px 50px;">
+         <form role="form" method="post">
+           <div class="form-group">
+             <label for="usrname"><span><i class="ico fas fa-envelope"></i></span> Email</label>
+             <input type="text" name="user"class="form-control" id="usrname"  placeholder="Correo electrónico" required autofocus>
+
+           </div>
+           <div class="form-group">
+             <label for="psw"><span><i class="ico fas fa-user"></i></span> Contraseña</label>
+             <input type="password" name="password" class="form-control" id="psw" placeholder="Contraseña" required>
+           </div>
+           <input type="hidden" value="signin" name="opcion">
+           <button class="btn btn-secondary btn-block" type="submit">Ingresar</button>
+         </form>
+       </div>
+       <div class="modal-footer">
+         <?php //echo "</br>".$mensaje_login; ?>
+       </div>
+     </div>
+
+   </div>
+     </div>
+
+     <script>
+$(document).ready(function(){
+  $("#myBtn").click(function(){
+    $("#myModal").modal();
+  });
+});
+</script> -->
