@@ -13,9 +13,7 @@ if(!empty($_SESSION['session'])){
   <body >
 
     <?php include '../html/navbar.php'; ?>
-
       <div class="container text-center">
-
         <form class="form-signin" method="post">
           <i class="icon-login fas fa-ghost"></i>
            <h1 class="h3 mb-3 font-weight-normal">Amazon UTN</h1>
@@ -23,7 +21,6 @@ if(!empty($_SESSION['session'])){
            <input type="password" name="password" class="form-control" placeholder="Contraseña" required>
            <input type="hidden" value="signin" name="opcion">
            <button class="btn btn-lg btn-secondary btn-block" type="submit">Ingresar</button>
-           <?php echo "</br>".$mensaje_login; ?>
          </form>
     </div>
   </body>

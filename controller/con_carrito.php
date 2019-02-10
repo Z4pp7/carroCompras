@@ -2,52 +2,35 @@
 include 'config.php';
 include 'con_session.php';
 require_once '../../model/Mod_Producto.php';
-require_once '../../model/Mod_Categoria.php';
 $producto = new Mod_Producto();
-$categoria = new Mod_Categoria();
 
   $mensaje="";
   $mensaje_cat="";
-  $mensaje_ultimo_pro="";
   if(isset($_POST['opcion'])){
-
-
     switch ($_POST['opcion']) {
-
-
-
       case 'agregar':
-
-
-      if(isset($_SESSION['session']))
-      {
-
 
       if(is_string(openssl_decrypt($_POST['codigo_pr'],cod,key))){
         $id=openssl_decrypt($_POST['codigo_pr'],cod,key);
+        $mensaje.="ADD: ".$id."</br>";
       }else {
         $mensaje="error";
       }
       if(is_string(openssl_decrypt($_POST['nombre_pr'],cod,key)) ){
         $nombre=openssl_decrypt($_POST['nombre_pr'],cod,key);
-        $mensaje_ultimo_pro =" <div class=\"alert alert-success text-center\"> Último producto agregado ".$nombre."
-        <span class=\"badge badge-success\">
-        <a  href=\"carrito.php\">Ver carrito</a>
-        </span>
-        </div>";
-
+        $mensaje.="ADD: ".$nombre."</br>";
       }else {
         $mensaje="error";
       }
       if(is_numeric(openssl_decrypt($_POST['valor_pr'],cod,key)) ){
         $valor=openssl_decrypt($_POST['valor_pr'],cod,key);
-
+        $mensaje.="ADD: ".$valor."</br>";
       }else {
         $mensaje="error";
       }
       if(is_numeric(openssl_decrypt($_POST['cantidad_pr'],cod,key)) ){
         $cantidad=openssl_decrypt($_POST['cantidad_pr'],cod,key);
-
+        $mensaje.="ADD: ".$cantidad."</br>";
       }else{
         $mensaje="error";
       }
@@ -72,19 +55,8 @@ $categoria = new Mod_Categoria();
         );
         $_SESSION['detalle'][$index]=$producto;
       }
-
       $mensaje=print_r($_SESSION,true);
-
-    }else{
-        header('Location: http://localhost/tienda-online/view/tienda/ingresar.php');
-    }
-
-
-
-
       break;
-
-
 
       case 'eliminar':
 
@@ -104,14 +76,9 @@ $categoria = new Mod_Categoria();
 
       case 'filtrar':
 
-      $cat=$_POST['categoria'];
-      //Descomentar y comentar dependiendo del caso
-      //Usando bdd local:
-      //$lista=$categoria->getProductosCategorizados($cat);
-      //Usando API:
-
-      $lista=$categoria->getApiProductosCategorizados($cat);
-      $_SESSION['mensaje']=serialize($cat);
+      $categoria=$_POST['categoria'];
+      $lista=$producto->getProductosCategorizados($categoria);
+      $_SESSION['mensaje']=serialize($categoria);
       $_SESSION['listafiltrada'] = serialize($lista);
       header('Location: http://localhost/tienda-online/view/producto/filtrado.php');
       break;
@@ -124,7 +91,5 @@ $categoria = new Mod_Categoria();
         // code...
       break;
     }
-
-
 
 }

@@ -76,7 +76,7 @@
         <?php
       }else{  ?>
         </br>
-        <div class="alert alert-primary text-center">
+        <div class="alert alert-success text-center">
           Carrito vacio
         </div>
 

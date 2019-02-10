@@ -2,7 +2,6 @@
 <?php
   include '../../controller/con_carrito.php';
   require_once '../../model/Mod_Producto.php';
-    require_once '../../model/Mod_Categoria.php';
 
  ?>
 
@@ -35,13 +34,9 @@
       </nav>
 
 <?php
-$categoria= new Mod_Categoria();
-//Descomentar y comentar dependiendo del caso
-//Usando bdd local:
-//$categorias=$categoria->getCategorias();
-//Usando API local:
-$categorias=$categoria->getApiCategorias();
-
+$producto= new Mod_Producto();
+//$lista=$producto->getProductos();
+$categorias=$producto->getCategorias();
  ?>
 
 
