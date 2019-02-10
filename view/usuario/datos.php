@@ -45,6 +45,7 @@
               if(campo==='cuenta'){
                 habilitar(document.getElementById('us'));
                 habilitar(document.getElementById('ps'));
+                habilitar(document.getElementById('co'));
                 habilitar(document.getElementById('gc'));
               }else if(campo==='personal'){
                 habilitar(document.getElementById('ce'));
@@ -54,7 +55,6 @@
                 habilitar(document.getElementById('gp'));
               }else if(campo==='contacto'){
                 habilitar(document.getElementById('te'));
-                habilitar(document.getElementById('co'));
                 habilitar(document.getElementById('go'));
               }else if(campo==='domicilio'){
                 habilitar(document.getElementById('cp'));
@@ -91,14 +91,19 @@
           <div class="datos">
             <div class="form-group">
              <label ><i class="icon-s fa fa-user"></i>Usuario</label>
-             <input type="text" class="form-control" id="us" placeholder="Nombre de usuario" value="<?php echo $user_session->getUsuario_us();?>"  disabled="true"/>
-             <small  class="form-text text-muted">Utilice combinación de mayúsculas, minúsculas y números</small>
+             <input type="text" class="form-control" id="us" placeholder="Nombre de usuario" value="<?php echo $user_session->getUsuario_us();?>" minlength="3" disabled="true" required/>
+             <small  class="form-text text-muted">Utilice combinación de mayúsculas, minúsculas y números. Mínimo 3 caracteres.</small>
+            </div>
+            <div class="form-group">
+             <label><i class="icon-s fas fa-envelope"></i>Correo electrónico</label>
+             <input type="email" class="form-control" id="co" placeholder="Correo electrónico" value="<?php echo $user_session->getCorreo_us();?>" disabled required/>
+             <small  class="form-text text-muted"></small>
             </div>
             <div class="form-group">
             <label ><i class="icon-s fa fa-lock"></i>Contraseña</label>
-            <input type="password" class="form-control" id="ps" placeholder="Contraseña" disabled/>
-            <small  class="form-text text-muted">Utilice combinación de mayúsculas, minúsculas y números</small>
-            </div>
+            <input type="password" class="form-control" id="ps" placeholder="Contraseña" minlength="3"  disabled required/>
+            <small  class="form-text text-muted">Utilice combinación de mayúsculas, minúsculas y números. Mínimo 3 caracteres.</small>
+          </div>
           </div>
 
            <button class="btn btn-outline-secondary my-2 my-sm-0" id="gc" type="submit" disabled>Guardar</button>
@@ -120,25 +125,25 @@
           <div class="datos">
             <div class="form-group">
              <label ><i class="icon-s fa fa-id-card"></i>Cédula</label>
-             <input type="text" class="form-control" id="ce"placeholder="Cédula" value="<?php echo $user_session->getCedula_us();?>" disabled/>
+             <input type="text" class="form-control" minlength="10" maxlength="10" id="ce"placeholder="Cédula" value="<?php echo $user_session->getCedula_us();?>" disabled required/>
              <small  class="form-text text-muted"></small>
             </div>
             <div class="form-group">
                <label ><i class="icon-s fa fa-user"></i>Nombres y apellidos</label>
                <div class="row">
                  <div class="col">
-                   <input type="text" class="form-control" id="no"placeholder="Nombres" value="<?php echo $user_session->getNombres_us();?>" disabled/>
-                   <small  class="form-text text-muted"></small>
+                   <input type="text" class="form-control" id="no"minlength="3" placeholder="Nombres" value="<?php echo $user_session->getNombres_us();?>" disabled required/>
+                   <small  class="form-text text-muted">Mínimo 3 caracteres.</small>
                  </div>
                  <div class="col">
-                   <input type="text" class="form-control" id="ap"placeholder="Apellidos" value="<?php echo $user_session->getApellidos_us();?>" disabled/>
-                   <small  class="form-text text-muted"></small>
+                   <input type="text" class="form-control" id="ap"placeholder="Apellidos" minlength="3" value="<?php echo $user_session->getApellidos_us();?>" disabled required/>
+                   <small  class="form-text text-muted">Mínimo 3 caracteres.</small>
                  </div>
                </div>
             </div>
             <div class="form-group">
              <label ><i class="icon-s fa fa-calendar-alt"></i>Fecha de nacimiento</label>
-             <input type="date" class="form-control" id="fe" value="<?php echo $user_session->getFecha_nacimiento_us();?>" disabled>
+             <input type="date" class="form-control" id="fe" value="<?php echo $user_session->getFecha_nacimiento_us();?>" disabled required>
              <small  class="form-text text-muted"></small>
              </div>
            </div>
@@ -160,14 +165,10 @@
           <div class="datos">
            <div class="form-group">
             <label><i class="icon-s fas fa-mobile-alt"></i>Teléfono</label>
-            <input type="text" class="form-control" id="te" placeholder="Teléfono" value="<?php echo $user_session->getTelefono_us();?>" disabled/>
+            <input type="text" class="form-control" id="te" placeholder="Teléfono"  minlength="10" maxlength="10"value="<?php echo $user_session->getTelefono_us();?>" disabled required/>
             <small  class="form-text text-muted"></small>
            </div>
-           <div class="form-group">
-            <label><i class="icon-s far fa-envelope"></i>Correo electrónico</label>
-            <input type="email" class="form-control" id="co" placeholder="Correo electrónico" value="<?php echo $user_session->getCorreo_us();?>" disabled/>
-            <small  class="form-text text-muted"></small>
-           </div>
+
           </div>
           <button class="btn btn-outline-secondary my-2 my-sm-0" id="go" type="submit" disabled>Guardar</button>
           <div class="line"></div>
@@ -187,23 +188,23 @@
           <div class="datos">
             <div class="form-group">
               <label><i class="icon-s fa fa-flag"></i>Código postal</label>
-              <input type="text" class="form-control" id="cp" placeholder="Código postal" value="<?php echo $user_session->getCodigo_postal_us();?>" disabled />
-              <small  class="form-text text-muted"></small>
+              <input type="text" class="form-control" id="cp" minlength="4" placeholder="Código postal" value="<?php echo $user_session->getCodigo_postal_us();?>" disabled required/>
+              <small  class="form-text text-muted">Mínimo 4 caracteres.</small>
             </div>
             <div class="form-group">
               <label><i class="icon-s fas fa-city"></i>País - Provincia - Ciudad</label>
               <div class="row">
                   <div class="col">
-                    <input type="text" class="form-control" id="pa" placeholder="País" value="<?php echo $user_session->getPais_us();?>" disabled />
-                    <small  class="form-text text-muted"></small>
+                    <input type="text" class="form-control" id="pa" minlength="3" placeholder="País" value="<?php echo $user_session->getPais_us();?>" disabled required />
+                    <small  class="form-text text-muted">Mínimo 3 caracteres.</small>
                   </div>
                   <div class="col">
-                    <input type="text" class="form-control" id="po" placeholder="Provincia" value="<?php echo $user_session->getProvincia_us();?>"disabled />
-                    <small  class="form-text text-muted"></small>
+                    <input type="text" class="form-control" id="po" minlength="3" placeholder="Provincia" value="<?php echo $user_session->getProvincia_us();?>"disabled required/>
+                    <small  class="form-text text-muted">Mínimo 3 caracteres.</small>
                   </div>
                   <div class="col">
-                    <input type="text" class="form-control" id="ci" placeholder="Ciudad" value="<?php echo $user_session->getCiudad_us();?>" disabled />
-                    <small  class="form-text text-muted"></small>
+                    <input type="text" class="form-control" id="ci" minlength="3" placeholder="Ciudad" value="<?php echo $user_session->getCiudad_us();?>" disabled required />
+                    <small  class="form-text text-muted">Mínimo 3 caracteres.</small>
                   </div>
               </div>
             </div>
@@ -211,23 +212,23 @@
               <label><i class="icon-s fas fa-map-marker-alt"></i>Calle 1 - Calle 2</label>
               <div class="row">
                 <div class="col">
-                 <input type="text" class="form-control" id="c1" placeholder="Calle 1" value="<?php echo $user_session->getCalle_uno_us();?>" disabled />
-                 <small  class="form-text text-muted"></small>
+                 <input type="text" class="form-control" id="c1" minlength="3" placeholder="Calle 1" value="<?php echo $user_session->getCalle_uno_us();?>" disabled required/>
+                 <small  class="form-text text-muted">Mínimo 3 caracteres.</small>
                 </div>
                 <div class="col">
-                   <input type="text" class="form-control" id="c2" placeholder="Calle 2" value="<?php echo $user_session->getCalle_dos_us();?>" disabled />
-                    <small  class="form-text text-muted"></small>
+                   <input type="text" class="form-control" id="c2" minlength="3" placeholder="Calle 2" value="<?php echo $user_session->getCalle_dos_us();?>" disabled required/>
+                    <small  class="form-text text-muted">Mínimo 3 caracteres.</small>
                 </div>
               </div>
             </div>
             <div class="form-group">
               <label><i class="icon-s fas fa-map-marker-alt"></i>Referencia</label>
-              <input type="text" class="form-control" id="re" placeholder="Referencia" value="<?php echo $user_session->getReferencia_us();?>" disabled />
-              <small  class="form-text text-muted"></small>
+              <input type="text" class="form-control" id="re" minlength="3" maxlength="29" placeholder="Referencia" value="<?php echo $user_session->getReferencia_us();?>" disabled required/>
+              <small  class="form-text text-muted">Mínimo 3 caracteres, máximo 30 caracteres</small>
             </div>
             <div class="form-group">
               <label><i class="icon-s fas fa-home"></i>N° de casa</label>
-              <input type="text" class="form-control" id="nc" placeholder="N° de casa" value="<?php echo $user_session->getNumero_casa_us();?>" disabled />
+              <input type="number" class="form-control" id="nc" placeholder="N° de casa" value="<?php echo $user_session->getNumero_casa_us();?>" disabled required/>
               <small  class="form-text text-muted"></small>
             </div>
           </div>

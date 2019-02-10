@@ -32,6 +32,11 @@ and open the template in the editor.
                      <small  class="form-text text-muted">Utilice combinación de mayúsculas, minúsculas y números. Mínimo 3 caracteres.</small>
                     </div>
                     <div class="form-group">
+                     <label><i class="icon-s fas fa-envelope"></i></i>Correo electrónico</label>
+                     <input type="email" class="form-control" id="co" placeholder="Correo electrónico" name="email" required/>
+                     <small  class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
                     <label ><i class="icon-s fa fa-lock"></i>Contraseña</label>
                     <input type="password" class="form-control" id="ps" name="password" minlength="3"  placeholder="Contraseña" required/>
                     <small  class="form-text text-muted">Utilice combinación de mayúsculas, minúsculas y números. Mínimo 3 caracteres.</small>
@@ -88,11 +93,7 @@ and open the template in the editor.
                     <input type="text" class="form-control" id="te" minlength="10" maxlength="10" placeholder="Teléfono" name="telefono" required/>
                     <small  class="form-text text-muted"></small>
                    </div>
-                   <div class="form-group">
-                    <label><i class="icon-s far fa-envelope"></i>Correo electrónico</label>
-                    <input type="email" class="form-control" id="co" placeholder="Correo electrónico" name="email" required/>
-                    <small  class="form-text text-muted"></small>
-                   </div>
+
                   </div>
             <div class="line">
                 </div>
