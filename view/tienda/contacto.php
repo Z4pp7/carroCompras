@@ -17,7 +17,7 @@
     </div>
  <div class="col-md-8 col-12 mt-5">
           <p class="message-f">SECTOR EL OLIVO
-              IBARRA-ECUADOR</p>
+              IBARRA-ECUADORnnn </p>
         </div>
 
   </body>
