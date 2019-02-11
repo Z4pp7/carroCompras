@@ -16,17 +16,17 @@
 
     </div>
 <center> <div class="col-md-8 col-12 mt-5">
-         
+
              <label>Hola. ¿En qué podemos ayudarte?
-             
-             
+
+
              </label>
-             <image src ="Dovinet-ff356089-7d97-4442-b37f-feab79c6d0f6.png" />
+             <image src ="../img/Dovinet-ff356089-7d97-4442-b37f-feab79c6d0f6.png" />
              <li class="active">
                 <button class="btn-sidebar btn-block" type="submit">
                   <i class="icon-s fas fa-tags"></i>	Devoluciones y reembolsos</button>
               </li>
- 
+
               <li class="active">
                 <button class="btn-sidebar btn-block" type="submit">
                   <i class="icon-s fas fa-tags"></i>	Soporte para dispositivos</button>

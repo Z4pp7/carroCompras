@@ -48,7 +48,7 @@
 
         <!-- Grid column -->
         <div class="col-md-8 col-12 mt-5">
-          <p class="message-f">Nadie existe por una razón, ni pertence a algún lugar, todos vamos a morir.</p>
+          <p class="message-f">Amazon UTN</p>
         </div>
         <!-- Grid column -->
 

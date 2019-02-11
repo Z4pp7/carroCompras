@@ -8,7 +8,7 @@ and open the template in the editor.
 <html>
     <head>
         <?php include '../html/head.php'; ?>
-        <link href="../css/registro.css" rel="stylesheet"> 
+        <link href="../css/registro.css" rel="stylesheet">
 
     </head>
     <body>
@@ -54,7 +54,7 @@ and open the template in the editor.
                     </div>
                 </div>
                 <div class="datos">
-                    <?php include '../../model/Validar.php'; ?>
+
                     <div class="form-group">
                         <label ><i class="icon-s fa fa-id-card"></i>Cédula</label>
                         <input type="text" class="form-control" id="ce" minlength="10" maxlength="10"  placeholder="Cédula" name="cedula" onkeypress="return solonumeros(event)"  required/>
