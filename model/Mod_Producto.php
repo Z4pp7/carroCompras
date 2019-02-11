@@ -30,9 +30,9 @@ class Mod_Producto {
               $atributo->setValor_unitario_pr($dato['pro_precio']);
               if($dato["categoria"]["cat_nombre"]==='Zapatos')
               {
-                          $atributo->setDescuento_pr("-4%");
+                          $atributo->setDescuento_pr("4");
               }else{
-                          $atributo->setDescuento_pr("");
+                          $atributo->setDescuento_pr("0");
               }
 
               $atributo->setStock_pr($dato['pro_stock']);
@@ -57,6 +57,13 @@ class Mod_Producto {
               $atributo->setDescripcion_pr($dato['pro_descripcion']);
               $atributo->setCaracteristicas_pr($dato['pro_caracteristicas']);
               $atributo->setValor_unitario_pr($dato['pro_precio']);
+              if($dato["categoria"]["cat_nombre"]==='Zapatos')
+              {
+                          $atributo->setDescuento_pr("4");
+              }else{
+                          $atributo->setDescuento_pr("0");
+              }
+
               $atributo->setStock_pr($dato['pro_stock']);
           }
 
