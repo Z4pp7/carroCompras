@@ -16,8 +16,20 @@
 
     </div>
  <div class="col-md-8 col-12 mt-5">
-          <p class="message-f">SECTOR EL OLIVO
-              IBARRA-ECUADORnnn </p>
+          <p class="message-f">Para comunicarse cualquiera de los siguientes medios:</p>
+           <p class="message-f">Teléfonos: +59302 997800 Ext. 7161/ 7162 </p>
+            <p class="message-f">E-mail de información: @utn.edu.ec</p>
+             <p class="message-f">Ubicación: 
+
+Ciudadela Universitaria, Av. 17 de Julio 5-21 y General José María Cordova.
+
+Sector del Olivo.
+
+Ibarra, Ecuador, América del Sur. </p>
+              <p class="message-f">Código Postal Institucional: 199
+
+Código Postal Georeferencial: EC100150 </p>
+              
         </div>
 
   </body>
