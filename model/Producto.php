@@ -13,6 +13,7 @@ class Producto {
     private $caracteristicas_pr;
     private $valor_unitario_pr;
     private $stock_pr;
+    private $descuento_pr;
 
     function getId_pr() {
         return $this->id_pr;
@@ -50,6 +51,11 @@ class Producto {
         return $this->stock_pr;
     }
 
+    function getDescuento_pr() {
+        return $this->descuento_pr;
+    }
+
+
     function setId_pr($id_pr) {
         $this->id_pr = $id_pr;
     }
@@ -84,6 +90,9 @@ class Producto {
 
     function setStock_pr($stock_pr) {
         $this->stock_pr = $stock_pr;
+    }
+    function setDescuento_pr($descuento_pr) {
+        $this->descuento_pr = $descuento_pr;
     }
 
 

@@ -109,6 +109,7 @@ $categorias=$categoria->getApiCategorias();
                     <div class="card-body">
                       <h6 class="card-title">  <?php echo  $dato->getNombre_pr();  ?></h6>
                       <p class="card-text"><?php echo  "$ ".$dato->getValor_unitario_pr();  ?></p>
+                      <p class="card-text descuento"  ><?php echo  $dato->getDescuento_pr();  ?></p>
                     </div>
                   </div>
                 </form>
