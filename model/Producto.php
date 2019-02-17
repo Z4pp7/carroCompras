@@ -14,6 +14,7 @@ class Producto {
     private $valor_unitario_pr;
     private $stock_pr;
     private $descuento_pr;
+    private $valor_descuento_pr;
 
     function getId_pr() {
         return $this->id_pr;
@@ -53,6 +54,9 @@ class Producto {
 
     function getDescuento_pr() {
         return $this->descuento_pr;
+    }
+    function getValor_descuento_pr() {
+        return $this->valor_descuento_pr;
     }
 
 
@@ -94,6 +98,11 @@ class Producto {
     function setDescuento_pr($descuento_pr) {
         $this->descuento_pr = $descuento_pr;
     }
+    function setValor_descuento_pr($valor_descuento_pr) {
+        $this->valor_descuento_pr = $valor_descuento_pr;
+    }
+
+
 
 
 

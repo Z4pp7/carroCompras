@@ -42,44 +42,44 @@
                <p><?php echo $producto->getDescripcion_pr();?></p>
                <h6 class="text font-weight-bold">Caracteristicas</h6>
                <p><?php echo $producto->getCaracteristicas_pr();?></p>
-               <h6 class="text font-weight-bold">Precio</h6>
                <?php
-               $valor=$producto->getValor_unitario_pr();
-             if($producto->getDescuento_pr()>0)
-               {
-                   $descuento=$producto->getDescuento_pr()/100;
-                  $total=$valor*$descuento;
-                            ?>
-               <p><?php echo $total?></p>
-
-
+               if($producto->getDescuento_pr()!=0){
+               ?>
+               <h6 class="text font-weight-bold">Precio normal</h6>
+               <p><?php echo $producto->getValor_unitario_pr();?></p>
+               <h6 class="text font-weight-bold">Descuento</h6>
+               <p><?php echo $producto->getDescuento_pr()."%";?></p>
+               <h6 class="text font-weight-bold">Precio de oferta</h6>
+               <p><?php echo $producto->getValor_descuento_pr();?></p>
                <?php
-             }else { ?>
+             }else{
+                ?>
+                <h6 class="text font-weight-bold">Precio</h6>
                 <p><?php echo $producto->getValor_unitario_pr();?></p>
-                <?php
-                }
-             ?>
 
+              <?php } ?>
+
+
+
+              <?php if($producto->getStock_pr()!=0){?>
                <h6 class="text font-weight-bold">Cantidad (1/<?php echo $producto->getStock_pr();?>)</h6>
                <input type="number" class="form-control" name="cantidad_pr" id="cantidad_pr" max="<?php echo $producto->getStock_pr();?>" min="1" required>
-              </br>
+               </br>
 
 
-                 <input type="hidden" name="codigo_pr" id="codigo_pr" value="<?php echo openssl_encrypt($producto->getCodigo_pr(),cod,key); ?>">
+                 <input type="hidden" name="id_pr" id="id_pr" value="<?php echo openssl_encrypt($producto->getId_pr(),cod,key);?>">
                  <input type="hidden" name="nombre_pr" id="nombre_pr" value="<?php echo openssl_encrypt($producto->getNombre_pr(),cod,key); ?>">
-
-
-
-
-
                  <input type="hidden" name="valor_pr" id="valor_pr"value="<?php echo openssl_encrypt($producto->getValor_unitario_pr(),cod,key);?>">
-
+                 <input type="hidden" name="descuento_pr" id="descuento_pr" value="<?php echo openssl_encrypt($producto->getDescuento_pr(),cod,key); ?>">
+                 <input type="hidden" name="valor_final_pr" id="valor_final_pr"value="<?php echo openssl_encrypt($producto->getValor_descuento_pr(),cod,key);?>">
 
                  <input type="hidden" name="opcion" value="agregar">
-
                  <button class="btn btn-secondary" type="submit">
                    Añadir al carrito
                  </button>
+               <?php } else { ?>
+                  <h5 class="text font-weight-bold text-danger">PRODUCTO AGOTADO</h5>
+               <?php } ?>
                </form>
            </div>
          </div>

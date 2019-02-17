@@ -18,59 +18,75 @@ $categoria = new Mod_Categoria();
 
       case 'agregar':
 
-
       if(isset($_SESSION['session']))
       {
-
-
-      if(is_string(openssl_decrypt($_POST['codigo_pr'],cod,key))){
-        $id=openssl_decrypt($_POST['codigo_pr'],cod,key);
-      }else {
-        $mensaje="error";
-      }
-      if(is_string(openssl_decrypt($_POST['nombre_pr'],cod,key)) ){
-        $nombre=openssl_decrypt($_POST['nombre_pr'],cod,key);
-        $mensaje_ultimo_pro =" <div class=\"alert alert-success text-center\">Producto agregado ".$nombre."
-        <span class=\"badge badge-success\">
-        <a  href=\"carrito.php\"> Ver carrito</a>
-        </span>
-        </div>";
+        //Obtener valores desde vista producto
+        $id=$producto->desencriptarProductoSeleccionado("int",$_POST['id_pr']);
+        $cantidad=$_POST['cantidad_pr'];
+        $descuento=$producto->desencriptarProductoSeleccionado("int",$_POST['descuento_pr']);
+        $valor=$producto->desencriptarProductoSeleccionado("int",$_POST['valor_pr']);
+        if($descuento!=0){
+          $valorfinal=$producto->desencriptarProductoSeleccionado("int",$_POST['valor_final_pr']);
+        }else{
+          $valorfinal=$valor;
+        }
+        $nombre=$producto->desencriptarProductoSeleccionado("str",$_POST['nombre_pr']);
+        if($nombre!=null){
+          $mensaje_ultimo_pro =" <div class=\"alert alert-success text-center\">Producto agregado ".$nombre."
+          <span class=\"badge badge-success\">
+          <a  href=\"carrito.php\"> Ver carrito</a>
+          </span>
+          </div>";
           $_SESSION['prod_add']=$mensaje_ultimo_pro;
 
-      }else {
-        $mensaje="error";
-      }
-      if(is_numeric(openssl_decrypt($_POST['valor_pr'],cod,key)) ){
-        $valor=openssl_decrypt($_POST['valor_pr'],cod,key);
+        }
 
-      }else {
-        $mensaje="error";
-      }
 
-      $cantidad=$_POST['cantidad_pr'];
 
-      if(!isset($_SESSION['detalle']))
-      {
-        $producto = array(
-          'codigo' => $id ,
-          'nombre' => $nombre,
-          'valor' => $valor ,
-          'cantidad' => $cantidad
-        );
-        $_SESSION['detalle'][0]=$producto;
+        if(!isset($_SESSION['detalle']))
+        {
+          //Creando array utilizado para llenar tabla de carrito
+          $producto = array(
+            'id' => $id ,
+            'nombre' => $nombre,
+            'valor' => $valor ,
+            'cantidad' => $cantidad,
+            'descuento' => $descuento,
+            'valor_final' => $valorfinal,
+            'subtotal' => $valorfinal*$cantidad
 
-      }else{
-        $index=count($_SESSION['detalle']);
-        $producto = array(
-          'codigo' => $id ,
-          'nombre' => $nombre,
-          'valor' => $valor ,
-          'cantidad' => $cantidad
-        );
+          );
 
-        
+          //Creando array utilizado para enviar a API-FACTURACION
+          $inovice_details=array(
+            'product_id' => $id ,
+            'quantity' => $cantidad,
+            'price' => $valor ,
+            'subtotal' => $valorfinal*$cantidad
+          );
+          $_SESSION['detalle'][0]=$producto;
+          $_SESSION['inovice_details'][0]=$inovice_details;
+
+        }else{
+          $index=count($_SESSION['detalle']);
+          $producto = array(
+            'id' => $id ,
+            'nombre' => $nombre,
+            'valor' => $valor ,
+            'cantidad' => $cantidad,
+            'descuento' => $descuento,
+            'valor_final' => $valorfinal,
+            'subtotal' => $valorfinal*$cantidad
+          );
+          $inovice_details=array(
+            'product_id' => $id ,
+            'quantity' => $cantidad,
+            'price' => $valor ,
+            'subtotal' => $valorfinal*$cantidad
+          );
 
         $_SESSION['detalle'][$index]=$producto;
+        $_SESSION['inovice_details'][$index]=$inovice_details;
       }
 
       $mensaje=print_r($_SESSION,true);
@@ -89,12 +105,13 @@ $categoria = new Mod_Categoria();
 
       case 'eliminar':
 
-        if(is_string(openssl_decrypt($_POST['codigo_pr'],cod,key))){
-          $id=openssl_decrypt($_POST['codigo_pr'],cod,key);
+        if(is_numeric(openssl_decrypt($_POST['id_pr'],cod,key))){
+          $id=openssl_decrypt($_POST['id_pr'],cod,key);
           foreach ($_SESSION['detalle'] as $index => $producto) {
-            if($id==$producto['codigo'])
+            if($id==$producto['id'])
             {
               unset($_SESSION['detalle'][$index]);
+              unset($_SESSION['inovice_details'][$index]);
 
             }
           }
@@ -105,8 +122,8 @@ $categoria = new Mod_Categoria();
 
       case 'detalle':
 
-          $codigo_pr=$_POST['codigo_pr'];
-          $pro=$producto->getProducto($codigo_pr);
+          $id_pr=$_POST['id_pr'];
+          $pro=$producto->getProducto($id_pr);
           $_SESSION['producto'] = serialize($pro);
           $mensa=$pro->getValor_unitario_pr();
           header('Location: http://localhost/tienda-online/view/producto/detalle.php');
@@ -130,6 +147,11 @@ $categoria = new Mod_Categoria();
 
       case 'todo':
       header('Location: http://localhost/tienda-online/view/producto/producto.php');
+      break;
+
+
+      case 'comprar':
+      // Programar las funciones necesarias en Mod_Compras
       break;
 
 

@@ -102,7 +102,7 @@ $categorias=$categoria->getApiCategorias();
 
             <div class="col-4">
               <form action="" method="post">
-                <input type="hidden" name="codigo_pr" id="codigo_pr" value="<?php echo $dato->getCodigo_pr();?>">
+                <input type="hidden" name="id_pr"  value="<?php echo $dato->getId_pr();?>">
                 <input type="hidden" name="opcion" value="detalle">
 
 
@@ -120,10 +120,14 @@ $categorias=$categoria->getApiCategorias();
                    >
                     </button>
                     <div class="card-body">
-                      <h5 class="card-title">  <?php echo  $dato->getNombre_pr();  ?></h5>
-                      <p class="card-text"><?php echo  $dato->getValor_unitario_pr();  ?></p>
-
-
+                      <h6 class="card-title">  <?php echo  $dato->getNombre_pr();  ?></h6>
+                      <?php if($dato->getDescuento_pr()!=0){?>
+                        <h6 class="card-subtitle mb-2 descuento"><?php echo "- ".  $dato->getDescuento_pr()." %"?></h6>
+                        <p class="card-text tachar"><?php echo  "$ ".$dato->getValor_unitario_pr();  ?></p>
+                        <p class="card-text nuevo_valor"  ><?php echo "$ ". $dato->getValor_descuento_pr();  ?></p>
+                      <?php }else{?>
+                          <p class="card-text"><?php echo  "$ ".$dato->getValor_unitario_pr();  ?></p>
+                        <?php }?>
                     </div>
                   </div>
                       </form>

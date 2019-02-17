@@ -38,7 +38,17 @@ animation-iteration-count: 1;
 }
 
 .descuento{
-    color: #df5b54;
+  color: #df5b54;
+}
+
+.nuevo_valor{
+  color: green;
+}
+.tachar{
+
+    margin-bottom: 5px;
+  text-decoration:line-through;
+  font-size: 12px;
 }
 
 
