@@ -83,12 +83,11 @@
            <small  class="form-text text-muted">Mínimo 12 caracteres.</small>
            <label >Tipo de envio</label>
            <input type="text" class="form-control"  placeholder="Número" name="envio" required/>
-
            <label >Valor de envio</label>
-           <input type="text" class="form-control"  placeholder="Número" value="3" name="valor_envio"  readonly required/>
+           <input type="text" class="form-control"  placeholder="Número" value="3" name="valor_envio"   required/>
            <label >Regalo</label>
-           <input type="checkbox"  name="regalo"/></br>
-
+           <input type="text" class="form-control"  placeholder="Regalo" value="3" name="Regalo"   required/>
+           
            <!--Utilizado en el controlador  -->
            <input type="hidden" name="opcion" value="comprar">
            <button class="btn btn-success" type="submit">
