@@ -54,8 +54,7 @@ class Mod_Producto {
     $inventario_URL = 'https://api-rest-tiendaonline.herokuapp.com/api/productos-categorias';
     $inventario_json = file_get_contents($inventario_URL);
     $inventario_array = json_decode($inventario_json, true);
-<<<<<<< HEAD
-    //  print_r($inventario_array);
+    //print_r($inventario_array);
     $atributo = new Producto();
         foreach ($inventario_array as $dato) {
             if($dato['pro_id']==$id_pr){
