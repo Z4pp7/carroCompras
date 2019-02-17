@@ -96,6 +96,29 @@ class Mod_Producto {
     return $total;
   }
 
+  public function desencriptarProductoSeleccionado($tipo,$parametro)
+  {
+
+    if($tipo==="int")
+    {
+      if(is_numeric(openssl_decrypt($parametro,cod,key))){
+        $resultado=openssl_decrypt($parametro,cod,key);
+      }
+    }else{
+      if(is_string(openssl_decrypt($parametro,cod,key))){
+        $resultado=openssl_decrypt($parametro,cod,key);
+      }
+    }
+
+    return $resultado;
+  }
+
+
+
+
+
+
+//Utilizado para probar localmente
   public function getProductos() {
 
         $pdo = Database::connect();
@@ -120,22 +143,7 @@ class Mod_Producto {
         return $listado;
     }
 
-    public function desencriptarProductoSeleccionado($tipo,$parametro)
-    {
 
-      if($tipo==="int")
-      {
-        if(is_numeric(openssl_decrypt($parametro,cod,key))){
-          $resultado=openssl_decrypt($parametro,cod,key);
-        }
-      }else{
-        if(is_string(openssl_decrypt($parametro,cod,key))){
-          $resultado=openssl_decrypt($parametro,cod,key);
-        }
-      }
-
-      return $resultado;
-    }
 
 
 
