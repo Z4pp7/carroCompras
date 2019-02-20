@@ -19,11 +19,12 @@ class Mod_Compra {
                                     'gift' => $regalo);
     $jsonData->inovice_details = $detalle; //donde detalle es el arreglo con informacion de cada producto
     $url = "http://facturacion-utn-amazon.herokuapp.com/api/new-e-commerce-invoice";
+    print_r($jsonData);
     $response = $this->jsonResponse($url,$jsonData);
+    
     return $response;
 
   }
-
 
 
 

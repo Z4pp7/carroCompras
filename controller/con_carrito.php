@@ -150,8 +150,9 @@ $compra = new Mod_Compra();
       case 'todo':
       header('Location: https://amazon-utn.herokuapp.com/view/producto/producto.php');
       break;
-
-
+  
+      
+  
       case 'comprar':
       $total=$_POST['total'];
       $numero_targeta=$_POST['targeta'];
@@ -162,6 +163,7 @@ $compra = new Mod_Compra();
       $detalle=  $_SESSION['inovice_details'];
       $response=$compra->order($total,$numero_targeta,$usuario,$precio_envio,$tipo_envio,$regalo,$detalle);
       print_r($response);
+            //header('Location: https://amazon-utn.herokuapp.com/view/tienda/comprarealizada.php');
       break;
 
 
