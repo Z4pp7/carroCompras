@@ -135,6 +135,6 @@ and open the template in the editor.
   </div>
 </body>
 
-  <?php include './html/footer.php'; ?>
+  <?php include './view/html/footer.php'; ?>
 
 </html>
