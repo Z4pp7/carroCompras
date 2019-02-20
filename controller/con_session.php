@@ -16,7 +16,7 @@ $mensaje_login="";
 
                 $_SESSION['user_session'] = serialize($sesion);
                 $_SESSION["session"] = "session";
-                header('Location: http://localhost/tienda-online/view/tienda/index.php');
+                header('Location: https://amazon-utn.herokuapp.com/');
 
             }else{
                 $mensaje_login=" <div class=\"alert alert-danger text-center\"> Usuario o contraseña incorrectos
@@ -69,7 +69,7 @@ $mensaje_login="";
           case "signout":
 
             session_destroy();
-            header('Location: http://localhost/tienda-online/view/tienda/index.php');
+            header('Location: https://amazon-utn.herokuapp.com/');
 
           break;
         }
