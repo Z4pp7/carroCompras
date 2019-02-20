@@ -29,7 +29,7 @@
        <div class="row ">
          <div class="col-md-5 ">
            <div class="card text-center " >
-             <img  class="card-img-top"     src=" <?php echo  "data:image/".$dato->getType().";base64,".$dato->getImagen_pr();?>" >
+             <img  class="card-img-top"     src=" <?php echo  "data:image/".$producto->getType().";base64,".$producto->getImagen_pr();?>" >
            </div>
 
           </div>
