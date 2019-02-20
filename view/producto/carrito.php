@@ -81,8 +81,9 @@
            <label >Número de targeta de credito</label>
            <input type="text" class="form-control"  placeholder="id" name="id" value="2" required/>
            <input type="text" class="form-control"  placeholder="total" name="total" value="<?php echo $total; ?>" />
+           <small  class="form-text text-muted">Subtotal.</small>
            <input type="text" class="form-control"  placeholder="Número" name="targeta" value="123456789123" minlength="12" maxlength="12" required/>
-           <small  class="form-text text-muted">Mínimo 12 caracteres.</small>
+           <small  class="form-text text-muted">N° de targeta.</small>
            <label >Tipo de envio</label>
            <input type="text" class="form-control"  placeholder="tipo" name="envio" value="Sencillo" required/>
            <label >Valor de envio</label>

@@ -49,7 +49,7 @@ and open the template in the editor.
         <div class="container">
           <div class="carousel-caption text-right">
             <h1>La mejor forma de compra</h1>
-            <p>La mejor opción para tus compras, recuerda que todos tus compras son seguras aqui en amazon UTN.</p>
+            <p>La mejor opción para tus compras, recuerda que todos tus compras son seguras aquí en amazon UTN.</p>
           </div>
         </div>
       </div>
@@ -77,13 +77,13 @@ and open the template in the editor.
       <div class="col-lg-4">
         <svg class="bd-placeholder-img rounded-circle" width="0" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><img src="http://estrenon.com/wp-content/uploads/icono1-1-140x140.png" alt="Smiley face" height="140px" width="140px"><text fill="#777" dy=".3em" x="50%" y="50%"></text></svg>
         <h2>Ropa</h2>
-        <p>Descubre las mejores ofertas en lo que es ropa para damas, caballeros y niños solo aqui en Amazon UTN</p>
+        <p>Descubre las mejores ofertas en lo que es ropa para damas, caballeros y niños solo aquí en Amazon UTN</p>
         <p><a class="btn btn-secondary" href="#" role="button">Detalles</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
         <svg class="bd-placeholder-img rounded-circle" width="0" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsTk8swU8-Noren9FXeg0VKh3GEtE-s1ZROlH9l0cQxD7sUQpSMg" alt="Smiley face" height="140px" width="140px"><text fill="#777" dy=".3em" x="50%" y="50%"></text></svg>
         <h2>Descuentos</h2>
-        <p>Opten los mejores descuentos, presenta tu carnet de la universidad para optener un descueto de hasta en un 10% en marcas seleccionadas</p>
+        <p>Opten los mejores descuentos, presenta tu carnet de la universidad para obtener un descueto de hasta en un 10% en marcas seleccionadas</p>
         <p><a class="btn btn-secondary" href="#" role="button">Detalles</a></p>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
@@ -137,5 +137,4 @@ and open the template in the editor.
 
   <?php include '../html/footer.php';?>
   
-
 </html>
