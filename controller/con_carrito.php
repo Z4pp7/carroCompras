@@ -92,10 +92,10 @@ $compra = new Mod_Compra();
       }
 
       $mensaje=print_r($_SESSION,true);
-      header('Location: http://localhost/tienda-online/view/producto/producto.php');
+      header('Location: https://amazon-utn.herokuapp.com/view/producto/producto.php');
 
     }else{
-        header('Location: http://localhost/tienda-online/view/tienda/ingresar.php');
+        header('Location: https://amazon-utn.herokuapp.com/view/tienda/ingresar.php');
     }
 
 
@@ -128,7 +128,7 @@ $compra = new Mod_Compra();
           $pro=$producto->getProducto($id_pr);
           $_SESSION['producto'] = serialize($pro);
           $mensa=$pro->getValor_unitario_pr();
-          header('Location: http://localhost/tienda-online/view/producto/detalle.php');
+          header('Location: https://amazon-utn.herokuapp.com/view/producto/detalle.php');
 
 
       break;
@@ -144,11 +144,11 @@ $compra = new Mod_Compra();
       $lista=$categoria->getApiProductosCategorizados($cat);
       $_SESSION['mensaje']=serialize($cat);
       $_SESSION['listafiltrada'] = serialize($lista);
-      header('Location: http://localhost/tienda-online/view/producto/filtrado.php');
+      header('Location: https://amazon-utn.herokuapp.com/view/producto/filtrado.php');
       break;
 
       case 'todo':
-      header('Location: http://localhost/tienda-online/view/producto/producto.php');
+      header('Location: https://amazon-utn.herokuapp.com/view/producto/producto.php');
       break;
 
 
