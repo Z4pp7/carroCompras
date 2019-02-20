@@ -1,0 +1,11 @@
+{
+    "name": "zero/tienda-online",
+    "description": "Description of project tienda-online.",
+    "authors": [
+        {
+            "name": "zappy",
+            "email": "zappy2310@gmail.com"
+        }
+    ],
+    "require": {}
+}
