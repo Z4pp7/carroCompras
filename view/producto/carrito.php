@@ -84,17 +84,16 @@
         <form action="" method="post">
           <div class="form-group">
            <label >Número de targeta de credito</label>
-           <input type="text" class="form-control"  placeholder="id" name="id" value="<?php echo $user->getId_us(); ?>" required/>
-           <input type="text" class="form-control"  placeholder="total" name="total" value="<?php echo $total; ?>" />
-           <small  class="form-text text-muted">Subtotal.</small>
-           <input type="text" class="form-control"  placeholder="Número" name="targeta" value="123456789123" minlength="12" maxlength="12" required/>
+           <input type="hidden" class="form-control"  placeholder="id" name="id" value="<?php echo $user->getId_us(); ?>" required/>
+           <input type="hidden" class="form-control"  placeholder="total" name="total" value="<?php echo $total; ?>" />
+           <input type="text" class="form-control"  placeholder="Número" name="targeta"  minlength="12" maxlength="12" required/>
            <small  class="form-text text-muted">N° de targeta.</small>
            <label >Tipo de envio</label>
            <input type="text" class="form-control"  placeholder="tipo" name="envio" value="Sencillo" required/>
            <label >Valor de envio</label>
-           <input type="text" class="form-control"  placeholder="Número" value="3" name="valor_envio"   required/>
+           <input type="text" class="form-control"  placeholder="Número" value="3" name="valor_envio"   readonly required/>
            <label >Regalo</label>
-           <input type="text" class="form-control"  placeholder="Regalo" value="3" name="regalo"   required/>
+           <input type="text" class="form-control"  placeholder="Regalo" value="3" name="regalo"  readonly required/>
 
            <!--Utilizado en el controlador  -->
            <input type="hidden" name="opcion" value="comprar">
