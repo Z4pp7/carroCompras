@@ -4,7 +4,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<?php include '../../controller/con_session.php'; ?>
+<?php include './controller/con_session.php'; ?>
 <html>
     <head>
       <?php include './view/html/head.php'; ?>
@@ -12,9 +12,9 @@ and open the template in the editor.
   <body>
     <?php
       if(!empty($_SESSION['session'])){
-        include '../html/navbar-l.php';
+        include './view/html/navbar-l.php';
       }else{
-        include '../html/navbar.php';
+        include './view/html/navbar.php';
       }
      ?>
 
@@ -135,6 +135,6 @@ and open the template in the editor.
   </div>
 </body>
 
-  <?php include '../html/footer.php'; ?>
+  <?php include './view/html/footer.php'; ?>
 
 </html>
