@@ -12,9 +12,9 @@ and open the template in the editor.
   <body>
     <?php
       if(!empty($_SESSION['session'])){
-        include './view/html/navbar-l.php';
+        include '../view/html/navbar-l.php';
       }else{
-        include './view/html/navbar.php';
+        include '../view/html/navbar.php';
       }
      ?>
 
