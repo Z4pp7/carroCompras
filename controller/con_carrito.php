@@ -163,7 +163,7 @@ $compra = new Mod_Compra();
       $detalle=  $_SESSION['inovice_details'];
       $response=$compra->order($total,$numero_targeta,$usuario,$precio_envio,$tipo_envio,$regalo,$detalle);
        unset($_SESSION['detalle']);
-         unset($_SESSION['inovice_details']);
+       unset($_SESSION['inovice_details']);
        header('Location: https://amazon-utn.herokuapp.com/view/tienda/comprarealizada.php');
       break;
 

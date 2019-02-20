@@ -15,8 +15,17 @@ class Producto {
     private $stock_pr;
     private $descuento_pr;
     private $valor_descuento_pr;
+    private $type;
 
-    function getId_pr() {
+    function getType() {
+        return $this->type;
+    }
+
+    function setType($type) {
+        $this->type = $type;
+    }
+
+        function getId_pr() {
         return $this->id_pr;
     }
 

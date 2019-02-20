@@ -100,10 +100,11 @@ $categorias=$categoria->getApiCategorias();
                        <img
                        class="card-img-top"
                        title="<?php echo $dato->getNombre_pr(); ?>"
-                       src=" <?php echo  $dato->getImagen_pr(); ?>"
+                       src=" <?php echo  "data:image/".$dato->getType().";base64,".$dato->getImagen_pr()?>"
                        data-toggle="popover"
                        data-trigger="hover"
                        data-content="<?php echo $dato->getDescripcion_pr(); ?>"
+                       
                        >
                      </button>
                     <div class="card-body">

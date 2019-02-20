@@ -22,6 +22,7 @@ class Mod_Producto {
               $atributo->setId_pr($dato['pro_id']);
               $atributo->setCodigo_pr($dato['pro_codigo']);
               $atributo->setCategoria_pr($dato["categoria"]["cat_nombre"]);
+              $atributo->setType($dato['pro_fototype']);
               if($dato['pro_foto']!==null){
                     $atributo->setImagen_pr($dato['pro_foto']);
               }else{
@@ -63,6 +64,7 @@ class Mod_Producto {
               $atributo->setId_pr($dato['pro_id']);
               $atributo->setCodigo_pr($dato['pro_codigo']);
               $atributo->setCategoria_pr($dato["categoria"]["cat_nombre"]);
+               $atributo->setType($dato['pro_fototype']);
               if($dato['pro_foto']!==null){
                 $atributo->setImagen_pr($dato['pro_foto']);
               }else{
