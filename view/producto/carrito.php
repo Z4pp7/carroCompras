@@ -83,14 +83,14 @@
 
         <form action="" method="post">
           <div class="form-group">
-           <label >Número de targeta de credito</label>
+           <label >Número de tarjeta de crédito</label>
            <input type="hidden" class="form-control"  placeholder="id" name="id" value="<?php echo $user->getId_us(); ?>" required/>
            <input type="hidden" class="form-control"  placeholder="total" name="total" value="<?php echo $total; ?>" />
            <input type="text" class="form-control"  placeholder="Número" name="targeta"  minlength="12" maxlength="12" required/>
            <small  class="form-text text-muted">N° de targeta.</small>
-           <label >Tipo de envio</label>
+           <label >Tipo de envío</label>
            <input type="text" class="form-control"  placeholder="tipo" name="envio" value="Sencillo" required/>
-           <label >Valor de envio</label>
+           <label >Valor de envío</label>
            <input type="text" class="form-control"  placeholder="Número" value="3" name="valor_envio"   readonly required/>
            <label >Regalo</label>
            <input type="text" class="form-control"  placeholder="Regalo" value="3" name="regalo"  readonly required/>
