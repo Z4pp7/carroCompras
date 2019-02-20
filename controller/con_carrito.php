@@ -162,8 +162,9 @@ $compra = new Mod_Compra();
       $regalo=$_POST['regalo'];
       $detalle=  $_SESSION['inovice_details'];
       $response=$compra->order($total,$numero_targeta,$usuario,$precio_envio,$tipo_envio,$regalo,$detalle);
-      print_r($response);
-            //header('Location: https://amazon-utn.herokuapp.com/view/tienda/comprarealizada.php');
+       unset($_SESSION['detalle']);
+         unset($_SESSION['inovice_details']);
+       header('Location: https://amazon-utn.herokuapp.com/view/tienda/comprarealizada.php');
       break;
 
 
