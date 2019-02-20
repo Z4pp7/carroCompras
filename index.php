@@ -7,7 +7,7 @@ and open the template in the editor.
 <?php include '../../controller/con_session.php'; ?>
 <html>
     <head>
-      <?php include 'html/head.php'; ?>
+      <?php include './view/html/head.php'; ?>
   </head>
   <body>
     <?php
