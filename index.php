@@ -4,60 +4,17 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<?php include './controller/con_session.php'; ?>
+<?php include '../../controller/con_session.php'; ?>
 <html>
     <head>
-     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<title>Amazon UTN</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-<link rel="shortcut icon" href="../img/ghost-solid.svg">
-<link href="../css/carousel.css" rel="stylesheet">
-<link href="../css/footer.css" rel="stylesheet">
-<link href="../css/navbar.css" rel="stylesheet">
+      <?php include '../html/head.php'; ?>
   </head>
   <body>
     <?php
       if(!empty($_SESSION['session'])){
-        include '../view/html/navbar-l.php';
+        include '../html/navbar-l.php';
       }else{
-        ?>
-      <nav class="navbar navbar-expand-lg " style="background-image:url(https://consumer-img.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/phones/p9-lite/assets/matebook/images/index-img/sec11/bg2.jpg)" >
-    <a class="navbar-brand" href="../../index.php"><img src="https://www.utn.edu.ec/transparencia/wp-content/uploads/2018/01/Logo-UTN-2018.gif" alt="Smiley face" height="200%" width="50%"></a>
-  <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item ">
-        <a class="nav-link" href="../../index.php" style = "color:  #b30404;">Inicio <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="../producto/producto.php" style = "color:  #b30404;">Productos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="../tienda/contacto.php" style = "color:  #b30404;">Contáctanos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="../tienda/ayuda.php" style = "color:  #b30404;">Ayuda</a>
-      </li>
-      </ul>
-
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link" href="../tienda/registro.php" style = "color:  #b30404;">Registrarse</a>
-        </li
-        <li class="nav-item">
-        <a class="nav-link" href="../tienda/ingresar.php" id="myBtn" style = "color:  #b30404;">Ingresar</a>
-        </li>
-      </ul>
-
-  </div>
-</nav>
-      <?php
+        include '../html/navbar.php';
       }
      ?>
 
@@ -178,6 +135,6 @@ and open the template in the editor.
   </div>
 </body>
 
-  <?php include './view/html/footer.php'; ?>
+  <?php include '../html/footer.php'; ?>
 
 </html>
