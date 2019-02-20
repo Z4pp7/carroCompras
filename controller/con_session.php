@@ -25,10 +25,10 @@ $mensaje_login="";
             // PARA PROBAR SIN CONEXION
           //if("zappy"=== $user && "zero" === $contrasena){
                 //
-                  // header('Location: http://localhost/tienda-online/view/tienda/index.php');
+                  // header('Location: hhttp://localhost/tienda-online/view/tienda/index.php');
             //}else
           //  {
-            //    header('Location: http://localhost/tienda-online/view/tienda/ingresar.php');
+            //    header('Location: hhttp://localhost/tienda-online/view/tienda/ingresar.php');
             //}
 
 
