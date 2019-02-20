@@ -7,7 +7,7 @@ and open the template in the editor.
 <?php include '../../controller/con_session.php'; ?>
 <html>
     <head>
-      <?php include 'https://amazon-utn.herokuapp.com/html/head.php'; ?>
+      <?php include '../html/head.php'; ?>
   </head>
   <body>
     <?php
