@@ -21,7 +21,6 @@ class Mod_Categoria {
           array_push($listado_filtrado, $dato["categoria"]["cat_nombre"]);
     }
     foreach (array_unique($listado_filtrado) as $dato) {
-
         $atributo = new Categoria();
         $atributo->setNombre_ca($dato);
         array_push($listado_categorias, $atributo);
