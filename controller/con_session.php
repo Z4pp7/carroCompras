@@ -57,7 +57,7 @@ $mensaje_login="";
                                     $calle_dos_us,$referencia_us, $numero_casa_us,$password_us);
             if($sesion->getMessage_us()==="Usuario creado satisfactoriamente"){
 
-                //header('Location: http://localhost/tienda-online/view/tienda/ingresar.php');
+                //header('Location: hhttp://localhost/tienda-online/view/tienda/ingresar.php');
                 $mensaje_login="   <div class=\"alert alert-success text-center\"> Registro exitoso
                 <span class=\"badge badge-success\"></div>";
             }else{
