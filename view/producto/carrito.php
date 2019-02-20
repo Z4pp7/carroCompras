@@ -87,7 +87,7 @@
            <input type="hidden" class="form-control"  placeholder="id" name="id" value="<?php echo $user->getId_us(); ?>" required/>
            <input type="hidden" class="form-control"  placeholder="total" name="total" value="<?php echo $total; ?>" />
            <input type="text" class="form-control"  placeholder="Número" name="targeta"  minlength="12" maxlength="12" required/>
-           <small  class="form-text text-muted">N° de targeta.</small>
+      
            <label >Tipo de envío</label>
            <input type="text" class="form-control"  placeholder="tipo" name="envio" value="Sencillo" required/>
            <label >Valor de envío</label>
