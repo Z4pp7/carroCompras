@@ -27,32 +27,29 @@ and open the template in the editor.
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active carousel-item-left">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect fill="#999999" width="100%" height="100%"></rect></svg>
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><img src="http://www.fondox.net/wallpapers/chica-muy-bonita-3166.jpg" alt="Smiley face" height="100%" width="100%"></svg>
         <div class="container">
-          <div class="carousel-caption text-left">
-            <h1>Example headline.</h1>
-            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+          <div class="carousel-caption text-right">
+            <h1>Ofertas en Ropa</h1>
+            <p>No te pierdas las mejores ofertas para este fin de semestre.</p>
           </div>
         </div>
       </div>
       <div class="carousel-item carousel-item-next carousel-item-left">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect fill="#999999" width="100%" height="100%"></rect></svg>
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><img src="https://assets.razerzone.com/eeimages/products/25919/deathadder-elite-ups-1.jpg" alt="Smiley face" height="100%" width="100%"></svg>
         <div class="container">
           <div class="carousel-caption">
             <h1>AMAZON UTN</h1>
             <p>Tienda OnLine</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect fill="#999999" width="100%" height="100%"></rect></svg>
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><img src="https://www.telemundo.com/sites/nbcutelemundo/files/images/article/cover/2017/04/04/persona-usando-computadora-sobre-mesa.jpg" alt="Smiley face" height="100%" width="100%"></svg>
         <div class="container">
           <div class="carousel-caption text-right">
-            <h1>One more for good measure.</h1>
-            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+            <h1>La mejor forma de compra</h1>
+            <p>La mejor opción para tus compras, recuerda que todos tus compras son seguras aqui en amazon UTN.</p>
           </div>
         </div>
       </div>
@@ -72,22 +69,22 @@ and open the template in the editor.
     <!-- Three columns of text below the carousel -->
     <div class="row">
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect fill="#777" width="100%" height="100%"></rect> <text fill="#777" dy=".3em" x="50%" y="50%" >140x140</text></svg>
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+        <svg class="bd-placeholder-img rounded-circle" width="0" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><img src="https://historyapp.pixl.org.uk/appleicon.png" alt="Smiley face" height="140px" width="140px"><text fill="#777" dy=".3em" x="50%" y="50%" ></text></svg>
+        <h2>Tecnología</h2>
+        <p>Encuentra una gran gama de productos en lo que es tecnología, laptops, celulares, etc.</p>
+        
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect fill="#777" width="100%" height="100%"></rect><text fill="#777" dy=".3em" x="50%" y="50%">140x140</text></svg>
-        <h2>Heading</h2>
-        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+        <svg class="bd-placeholder-img rounded-circle" width="0" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><img src="http://estrenon.com/wp-content/uploads/icono1-1-140x140.png" alt="Smiley face" height="140px" width="140px"><text fill="#777" dy=".3em" x="50%" y="50%"></text></svg>
+        <h2>Ropa</h2>
+        <p>Descubre las mejores ofertas en lo que es ropa para damas, caballeros y niños solo aqui en Amazon UTN</p>
+        <p><a class="btn btn-secondary" href="#" role="button">Detalles</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect fill="#777" width="100%" height="100%"></rect><text fill="#777" dy=".3em" x="50%" y="50%">140x140</text></svg>
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+        <svg class="bd-placeholder-img rounded-circle" width="0" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsTk8swU8-Noren9FXeg0VKh3GEtE-s1ZROlH9l0cQxD7sUQpSMg" alt="Smiley face" height="140px" width="140px"><text fill="#777" dy=".3em" x="50%" y="50%"></text></svg>
+        <h2>Descuentos</h2>
+        <p>Opten los mejores descuentos, presenta tu carnet de la universidad para optener un descueto de hasta en un 10% en marcas seleccionadas</p>
+        <p><a class="btn btn-secondary" href="#" role="button">Detalles</a></p>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
 
