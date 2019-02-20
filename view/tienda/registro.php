@@ -161,16 +161,17 @@ and open the template in the editor.
                         <label><i class="icon-s fas fa-city"></i>País - Provincia - Ciudad</label>
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" id="pa"  minlength="3" placeholder="País" name="pais" value="<?php echo $pais; ?>" onkeypress="return sololetra(event)" required/>
-                                <small  class="form-text text-muted">Mínimo 3 caracteres.</small>
+                                <input type="" class="form-control" id="pa"  minlength="3" placeholder="País" name="pais" value="<?php echo $pais; ?>" onkeypress="return sololetra(event)" required/>
+                                <small  class="form-text text-muted">Paises de Envio : Ecuador</small>
+                                
                             </div>
                             <div class="col">
                                 <input type="text" class="form-control" id="po" minlength="3" placeholder="Provincia" name="provincia" value="<?php echo $provincia; ?>" onkeypress="return sololetra(event)" required/>
-                                <small  class="form-text text-muted">Mínimo 3 caracteres.</small>
+                                <small  class="form-text text-muted">Provicia Valida</small>
                             </div>
                             <div class="col">
                                 <input type="text" class="form-control" id="ci" minlength="3" placeholder="Ciudad" name="ciudad" value="<?php echo $ciudad; ?>" onkeypress="return sololetra(event)" required/>
-                                <small  class="form-text text-muted">Mínimo 3 caracteres.</small>
+                                <small  class="form-text text-muted">Ciudad Valida.</small>
                             </div>
                         </div>
                     </div>
