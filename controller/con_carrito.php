@@ -3,8 +3,10 @@ include 'config.php';
 include 'con_session.php';
 require_once '../../model/Mod_Producto.php';
 require_once '../../model/Mod_Categoria.php';
+require_once '../../model/Mod_Compra.php';
 $producto = new Mod_Producto();
 $categoria = new Mod_Categoria();
+$compra = new Mod_Compra();
 
   $mensaje="";
   $mensaje_cat="";
@@ -80,9 +82,9 @@ $categoria = new Mod_Categoria();
           );
           $inovice_details=array(
             'product_id' => $id ,
+            'subtotal' => $valorfinal*$cantidad,
             'quantity' => $cantidad,
-            'price' => $valor ,
-            'subtotal' => $valorfinal*$cantidad
+            'price' => $valor
           );
 
         $_SESSION['detalle'][$index]=$producto;
@@ -151,7 +153,15 @@ $categoria = new Mod_Categoria();
 
 
       case 'comprar':
-      // Programar las funciones necesarias en Mod_Compras
+      $total=$_POST['total'];
+      $numero_targeta=$_POST['targeta'];
+      $usuario=$_POST['id'];
+      $precio_envio=$_POST['valor_envio'];
+      $tipo_envio=$_POST['envio'];
+      $regalo=$_POST['regalo'];
+      $detalle=  $_SESSION['inovice_details'];
+      $response=$compra->order($total,$numero_targeta,$usuario,$precio_envio,$tipo_envio,$regalo,$detalle);
+      print_r($response);
       break;
 
 

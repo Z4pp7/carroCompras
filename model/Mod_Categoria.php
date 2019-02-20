@@ -15,13 +15,18 @@ class Mod_Categoria {
     $inventario_URL = "https://api-rest-tiendaonline.herokuapp.com/api/productos-categorias";
     $inventario_json = file_get_contents($inventario_URL);
     $inventario_array = json_decode($inventario_json, true);
-    $listado = array();
+    $listado_categorias = array();
+    $listado_filtrado= array();
     foreach ($inventario_array as $dato) {
-        $atributo = new Categoria();
-        $atributo->setNombre_ca($dato["categoria"]["cat_nombre"]);
-        array_push($listado, $atributo);
+          array_push($listado_filtrado, $dato["categoria"]["cat_nombre"]);
     }
-    return $listado;
+    foreach (array_unique($listado_filtrado) as $dato) {
+
+        $atributo = new Categoria();
+        $atributo->setNombre_ca($dato);
+        array_push($listado_categorias, $atributo);
+    }
+    return $listado_categorias;
   }
 
  //Obtiene lista de productos por la categoria seleccionada

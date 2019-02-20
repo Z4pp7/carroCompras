@@ -21,8 +21,8 @@
         <?php
         if(!empty($_SESSION['detalle'])){
 
-          //utilzar inovice_details para api-facturacion, print_r utilizado para imprimir en pantalla arrays
-          print_r($_SESSION['inovice_details']);
+
+          
          ?>
         <table class="table table-hover table-bordered text-center">
           <thead>
@@ -79,14 +79,16 @@
         <form action="" method="post">
           <div class="form-group">
            <label >Número de targeta de credito</label>
-           <input type="text" class="form-control"  placeholder="Número" name="targeta" minlength="12" maxlength="12" required/>
+           <input type="text" class="form-control"  placeholder="id" name="id" value="2" required/>
+           <input type="text" class="form-control"  placeholder="total" name="total" value="<?php echo $total; ?>" />
+           <input type="text" class="form-control"  placeholder="Número" name="targeta" value="123456789123" minlength="12" maxlength="12" required/>
            <small  class="form-text text-muted">Mínimo 12 caracteres.</small>
            <label >Tipo de envio</label>
-           <input type="text" class="form-control"  placeholder="Número" name="envio" required/>
+           <input type="text" class="form-control"  placeholder="tipo" name="envio" value="Sencillo" required/>
            <label >Valor de envio</label>
            <input type="text" class="form-control"  placeholder="Número" value="3" name="valor_envio"   required/>
            <label >Regalo</label>
-           <input type="text" class="form-control"  placeholder="Regalo" value="3" name="Regalo"   required/>
+           <input type="text" class="form-control"  placeholder="Regalo" value="3" name="regalo"   required/>
 
            <!--Utilizado en el controlador  -->
            <input type="hidden" name="opcion" value="comprar">

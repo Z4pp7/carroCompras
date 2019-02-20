@@ -38,12 +38,14 @@ class Mod_Producto {
                   $total=$this->descuento($descuento,$dato['pro_precio']);
                   $atributo->setDescuento_pr($descuento);
                   $atributo->setValor_descuento_pr($total);
+
               }else{
                   $atributo->setDescuento_pr("0");
                   $atributo->setValor_descuento_pr("0");
               }
+                  $atributo->setStock_pr($dato['pro_stock']);
 
-              $atributo->setStock_pr($dato['pro_stock']);
+
               array_push($listado, $atributo);
           }
 

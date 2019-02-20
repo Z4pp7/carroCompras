@@ -91,9 +91,9 @@ class Mod_Usuario {
         'http' => array(
         'method'  => 'POST',
         'content' => json_encode( $jsonData ),
-        'header'=>  "Content-Type: application/json\r\n" .
+        'header'=>  "Content-Type: application/json\r\n" ,
                     "Accept: application/json\r\n",
-                    'ignore_errors' => true,
+                    'ignore_errors' => true
         )
     );
     $context  = stream_context_create( $options );
