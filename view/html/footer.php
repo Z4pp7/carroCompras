@@ -18,7 +18,7 @@
         <!-- Grid column -->
         <div class="col-md-2 mb-3">
           <h6 class="text-uppercase ">
-            <a class="nav-link nav-link-f"  href="#!">PRODUCTOS</a>
+              <a class="nav-link nav-link-f"  href="../producto/producto.php">PRODUCTOS</a>
           </h6>
         </div>
         <!-- Grid column -->
