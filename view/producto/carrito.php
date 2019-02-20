@@ -83,7 +83,7 @@
 
         <form action="" method="post">
           <div class="form-group">
-           <label >Número de targeta de credito</label>
+           <label >Número de tarjeta de crédito</label>
            <input type="hidden" class="form-control"  placeholder="id" name="id" value="<?php echo $user->getId_us(); ?>" required/>
            <input type="hidden" class="form-control"  placeholder="total" name="total" value="<?php echo $total; ?>" />
            <input type="text" class="form-control"  placeholder="Número" name="targeta"  minlength="12" maxlength="12" required/>
