@@ -2,7 +2,7 @@
 
 
  session_start();
- require_once '../../model/Mod_Usuario.php';
+ require_once '../model/Mod_Usuario.php';
  $usuario = new Mod_Usuario();
 $mensaje_login="";
 
