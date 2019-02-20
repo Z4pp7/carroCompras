@@ -9,7 +9,7 @@
         <a class="nav-link" href="../../index.php" style = "color:  #b30404;">Inicio <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../producto/producto.php" style = "color:  #b30404;">Productos</a>
+          <a class="nav-link" href="../../view/producto/producto.php" style = "color:  #b30404;">Productos</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="../tienda/contacto.php" style = "color:  #b30404;">Contáctanos</a>
