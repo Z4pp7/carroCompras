@@ -75,11 +75,16 @@
             </tr>
           </tbody>
         </table>
+          
+         <?php
+        if (isset($_SESSION['user_session'])) {
+         $user = unserialize($_SESSION['user_session']);
+         ?>
 
         <form action="" method="post">
           <div class="form-group">
            <label >Número de targeta de credito</label>
-           <input type="text" class="form-control"  placeholder="id" name="id" value="2" required/>
+           <input type="text" class="form-control"  placeholder="id" name="id" value="<?php echo $user->getId_us(); ?>" required/>
            <input type="text" class="form-control"  placeholder="total" name="total" value="<?php echo $total; ?>" />
            <small  class="form-text text-muted">Subtotal.</small>
            <input type="text" class="form-control"  placeholder="Número" name="targeta" value="123456789123" minlength="12" maxlength="12" required/>
@@ -99,6 +104,7 @@
           </div>
 
         </form>
+        <?php } ?>
 
 
 
@@ -121,6 +127,6 @@
 </html>
 <?php
 }else{
-    header('Location: http://localhost/tienda-online/view/tienda/index.php');
+    header('Location: https://amazon-utn.herokuapp.com/view/tienda/');
 }
 ?>
