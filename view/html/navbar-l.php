@@ -1,12 +1,12 @@
 <nav class="navbar navbar-expand-lg " style="background-image:url(https://consumer-img.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/phones/p9-lite/assets/matebook/images/index-img/sec11/bg2.jpg)">
-    <a class="navbar-brand" href="../../index.php"><img src="https://www.utn.edu.ec/transparencia/wp-content/uploads/2018/01/Logo-UTN-2018.gif" alt="Smiley face" height="200%" width="50%"></a>
+    <a class="navbar-brand" href="../../view/tienda/index.php"><img src="https://www.utn.edu.ec/transparencia/wp-content/uploads/2018/01/Logo-UTN-2018.gif" alt="Smiley face" height="200%" width="50%"></a>
   <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item ">
-        <a class="nav-link" href="../../index.php" style = "color:  #b30404;">Inicio <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="../../view/tienda/index.php" style = "color:  #b30404;">Inicio <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
           <a class="nav-link" href="../../view/producto/producto.php" style = "color:  #b30404;">Productos</a>

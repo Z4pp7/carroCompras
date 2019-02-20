@@ -2,7 +2,7 @@
 <?php include '../../controller/con_session.php';
 
 if(!empty($_SESSION['session'])){
-    header('Location: https://amazon-utn.herokuapp.com/');
+    header('Location: https://amazon-utn.herokuapp.com/view/tienda/');
 }  else{
 ?>
 <html lang="en" dir="ltr">
