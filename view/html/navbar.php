@@ -12,19 +12,19 @@
           <a class="nav-link" href="../../view/producto/producto.php" style = "color:  #b30404;">Productos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../tienda/contacto.php" style = "color:  #b30404;">Contáctanos</a>
+        <a class="nav-link" href="../../view/tienda/contacto.php" style = "color:  #b30404;">Contáctanos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../tienda/ayuda.php" style = "color:  #b30404;">Ayuda</a>
+        <a class="nav-link" href="../../view/tienda/ayuda.php" style = "color:  #b30404;">Ayuda</a>
       </li>
       </ul>
 
       <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link" href="../tienda/registro.php" style = "color:  #b30404;">Registrarse</a>
+          <a class="nav-link" href="../../view/tienda/registro.php" style = "color:  #b30404;">Registrarse</a>
         </li
         <li class="nav-item">
-        <a class="nav-link" href="../tienda/ingresar.php" id="myBtn" style = "color:  #b30404;">Ingresar</a>
+        <a class="nav-link" href="../../view/tienda/ingresar.php" id="myBtn" style = "color:  #b30404;">Ingresar</a>
         </li>
       </ul>
 

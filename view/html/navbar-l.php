@@ -12,16 +12,16 @@
           <a class="nav-link" href="../../view/producto/producto.php" style = "color:  #b30404;">Productos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../tienda/contacto.php" style = "color:  #b30404;">Contáctanos</a>
+        <a class="nav-link" href="../../view/tienda/contacto.php" style = "color:  #b30404;">Contáctanos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../tienda/ayuda.php" style = "color:  #b30404;">Ayuda</a>
+        <a class="nav-link" href="../../view/tienda/ayuda.php" style = "color:  #b30404;">Ayuda</a>
       </li>
       </ul>
 
       <ul class="nav">
           <li class="nav-item">
-          <a class="nav-link" href="../producto/carrito.php">
+          <a class="nav-link" href="../../view/producto/carrito.php">
             <i class="icon-ca fas fa-shopping-cart" style = "color:  #b30404;"></i> <?php echo(empty($_SESSION['detalle']))?0:count($_SESSION['detalle']);?>
           </a>
          </li>
@@ -31,7 +31,7 @@
               <i class="icon-us fas fa-user-circle" style = "color:  #b30404;"></i>
           </a>
           <div class="dropdown-menu" role="menu">
-              <a class="dropdown-item" href="../usuario/datos.php" style = "color:  #b30404;">Mi cuenta</a>
+              <a class="dropdown-item" href="../../view/usuario/datos.php" style = "color:  #b30404;">Mi cuenta</a>
             <div role="separator" class="dropdown-divider"></div>
             <a class="dropdown-item" href="">
               <form method="post">
